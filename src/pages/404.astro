@@ -1,0 +1,19 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="页面未找到">
+	<section class="mx-auto flex min-h-[55vh] w-full max-w-5xl flex-col items-start justify-center px-6 py-20 sm:px-8">
+		<p class="text-sm font-black uppercase tracking-[0.24em] text-[#e30613]">404</p>
+		<h1 class="mt-4 text-4xl font-black text-neutral-950 sm:text-5xl">页面未找到</h1>
+		<p class="mt-5 max-w-xl text-base leading-8 text-neutral-600">
+			当前链接可能已移动或不存在。你可以返回首页，继续浏览力耐产品与合作信息。
+		</p>
+		<a
+			href="/"
+			class="mt-8 inline-flex items-center justify-center bg-[#e30613] px-6 py-3 text-sm font-black text-white transition hover:bg-neutral-950"
+		>
+			返回首页
+		</a>
+	</section>
+</SiteLayout>
