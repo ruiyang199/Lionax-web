@@ -1,0 +1,10 @@
+{
+	"name": "lionax-web",
+	"description": "LIONAX brand and product catalog site",
+	"installCommand": "npm install",
+	"buildCommand": "npm run build",
+	"assets": {
+		"directory": "./dist",
+		"notFoundStrategy": "404Page"
+	}
+}
