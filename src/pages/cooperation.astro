@@ -1,0 +1,80 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const cooperationItems = [
+	['经销代理', '适合区域经销、汽配渠道和线下门店网络。'],
+	['门店养护', '适合汽修、快保、洗美和 Powersports 养护门店陈列。'],
+	['电商上架', '适合 1L、4L 规格组合销售和平台详情页展示。'],
+	['海外渠道', '可继续补充英文资料、规格表和认证信息。'],
+];
+---
+
+<SiteLayout
+	current="cooperation"
+	title="合作 | lionax 汽车润滑油与养护用品"
+	description="lionax 面向经销代理、汽修门店、电商和海外渠道开放合作。"
+>
+	<section class="bg-neutral-950 py-20 text-white sm:py-24">
+		<div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:items-center">
+			<div>
+				<p class="text-sm font-black uppercase text-[#e30613]">Cooperation</p>
+				<h1 class="mt-3 text-5xl font-black leading-tight tracking-normal sm:text-6xl">合作</h1>
+				<p class="mt-6 text-xl leading-8 text-neutral-300">
+					以荷兰原罐原装润滑油为核心卖点，当前网站结构适合先做品牌展示、产品介绍和招商入口。等资料完整后，可以继续接入表单、产品数据库或多语言页面。
+				</p>
+			</div>
+			<div class="grid gap-4">
+				{cooperationItems.map(([title, body]) => (
+					<div class="border border-white/10 bg-white/[0.06] p-6">
+						<h2 class="text-xl font-black">{title}</h2>
+						<p class="mt-2 leading-7 text-neutral-300">{body}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-white py-16">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<div class="grid gap-8 bg-[#e30613] p-7 text-white sm:p-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+				<div>
+					<p class="text-sm font-black uppercase text-white/80">Start with lionax</p>
+					<h2 class="mt-2 text-3xl font-black tracking-normal sm:text-4xl">获取 LIONAX 合作资料</h2>
+					<p class="mt-4 max-w-2xl leading-7 text-white/85">
+						欢迎经销商、汽修门店、洗美门店和 Powersports 养护渠道咨询产品资料与合作政策。
+					</p>
+				</div>
+				<div class="bg-white p-5 text-[#e30613] sm:p-6">
+					<p class="text-lg font-black text-neutral-950">广州力耐国际贸易有限公司</p>
+					<div class="mt-4 grid gap-3 text-sm font-bold leading-6 sm:text-base">
+						<a href="mailto:gzlionax@126.com" class="transition hover:text-[#e30613]">公司邮箱: gzlionax@126.com</a>
+						<a href="tel:13622877018" class="transition hover:text-[#e30613]">联系方式: 13622877018</a>
+						<p class="text-neutral-700">联系地址: 广州市番禺区番禺大道北555号天安科技园创新大厦602室</p>
+					</div>
+					<div class="mt-5 grid grid-cols-2 gap-4 text-center text-xs font-black text-neutral-700">
+						<div>
+							<img
+								src="/images/lionax-qr-jd.jpg"
+								alt="力耐京东二维码"
+								class="mx-auto aspect-square w-full max-w-36 object-contain"
+								width="707"
+								height="711"
+							/>
+							<p class="mt-2">京东旗舰店</p>
+						</div>
+						<div>
+							<img
+								src="/images/lionax-qr-contact.png"
+								alt="力耐联系二维码"
+								class="mx-auto aspect-square w-full max-w-36 object-contain"
+								width="200"
+								height="200"
+							/>
+							<p class="mt-2">扫码联系</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</SiteLayout>

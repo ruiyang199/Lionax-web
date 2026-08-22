@@ -1,0 +1,138 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { getProductEntries } from '../../data/products';
+
+export function getStaticPaths() {
+	return getProductEntries().map((product) => ({
+		params: { slug: product.slug },
+		props: { product },
+	}));
+}
+
+const { product } = Astro.props;
+
+const productDetailImageClass =
+	product.imageScale === 'powersports-oil'
+		? 'h-[88%] w-auto max-w-[80%] object-contain'
+		: product.imageScale === 'automotive-oil'
+			? 'h-[82%] w-auto max-w-[92%] object-contain'
+		: product.imageScale === 'detailing-jug'
+			? 'h-[90%] w-auto max-w-[82%] object-contain'
+		: product.imageScale === 'detailing-bottle'
+			? 'h-[90%] w-auto max-w-[70%] object-contain'
+		: 'max-h-full object-contain';
+---
+
+<SiteLayout
+	current="products"
+	title={`${product.name} | lionax 产品详情`}
+	description={product.desc}
+>
+	<section class="bg-neutral-950 py-10 text-white sm:py-12">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<a href="/products/" class="text-sm font-black uppercase text-[#e30613] transition hover:text-white">返回产品列表</a>
+			<p class="mt-5 text-sm font-black uppercase text-[#e30613]">Product Detail</p>
+			<h1 class="mt-2 max-w-5xl text-4xl font-black leading-tight tracking-normal sm:text-5xl">
+				{product.name}
+			</h1>
+			<p class="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">{product.desc}</p>
+		</div>
+	</section>
+
+	<section class="bg-neutral-100 py-10 sm:py-12">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+				<div class="bg-white p-5 shadow-sm sm:p-6">
+					<div class="flex aspect-[4/3] items-center justify-center bg-neutral-50 p-4">
+						<img
+							src={product.image}
+							alt={product.alt}
+							class={productDetailImageClass}
+						/>
+					</div>
+				</div>
+
+				<div class="bg-white p-5 shadow-sm sm:p-6">
+					<div class="grid gap-5 sm:grid-cols-[0.8fr_1.2fr]">
+						<div>
+							<p class="text-sm font-black uppercase text-[#e30613]">Category</p>
+							<div class="mt-3 flex flex-wrap gap-2">
+								<span class="bg-neutral-950 px-3 py-2 text-sm font-black text-white">{product.categoryName}</span>
+								{product.subCategoryName !== product.categoryName && (
+									<span class="bg-[#e30613] px-3 py-2 text-sm font-black text-white">{product.subCategoryName}</span>
+								)}
+							</div>
+							<p class="mt-5 text-sm font-black uppercase text-[#e30613]">Specification</p>
+							<p class="mt-2 text-2xl font-black text-neutral-950 sm:text-3xl">{product.spec}</p>
+						</div>
+
+						<div>
+							<h2 class="text-xl font-black text-neutral-950">产品特点</h2>
+							<div class="mt-4 grid gap-2">
+								{product.features.map((feature) => (
+									<div class="border-l-4 border-[#e30613] bg-neutral-50 px-4 py-2.5 text-sm font-bold leading-6 text-neutral-800">
+										{feature}
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-6 bg-white p-5 shadow-sm sm:p-6">
+				<div class="mb-5 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+					<div>
+						<p class="text-sm font-black uppercase text-[#e30613]">Parameters</p>
+						<h2 class="mt-2 text-3xl font-black tracking-normal text-neutral-950">参数信息</h2>
+					</div>
+				</div>
+				<div class="border border-neutral-200">
+					{product.parameters.map(([label, value]) => (
+						<div class="grid border-b border-neutral-200 last:border-b-0 sm:grid-cols-[220px_1fr]">
+							<div class="bg-neutral-50 px-4 py-3 text-sm font-black text-neutral-700">{label}</div>
+							<div class="px-4 py-3 text-sm font-semibold text-neutral-950 sm:text-base">{value}</div>
+						</div>
+					))}
+				</div>
+			</div>
+
+			{product.detailSections && (
+				<div class="mt-6 bg-white p-5 shadow-sm sm:p-6">
+					<div class="mb-6">
+						<p class="text-sm font-black uppercase text-[#e30613]">Product Notes</p>
+						<h2 class="mt-2 text-3xl font-black tracking-normal text-neutral-950">产品介绍</h2>
+					</div>
+					<div class="grid gap-5 lg:grid-cols-3">
+						{product.detailSections.map((section) => (
+							<article class="border border-neutral-200 bg-neutral-50">
+								<div class="flex aspect-[4/3] items-center justify-center bg-white p-3">
+									<img src={section.image} alt={section.alt} class="max-h-full w-full object-contain" />
+								</div>
+								<div class="p-5">
+									<h3 class="text-xl font-black text-neutral-950">{section.title}</h3>
+									<p class="mt-3 text-sm font-semibold leading-7 text-neutral-600">{section.desc}</p>
+								</div>
+							</article>
+						))}
+					</div>
+				</div>
+			)}
+		</div>
+	</section>
+
+	<section class="bg-neutral-950 py-10 text-white">
+		<div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-5 sm:px-8 lg:flex-row lg:items-center">
+			<div>
+				<p class="text-sm font-black uppercase text-[#e30613]">Cooperation</p>
+				<h2 class="mt-2 text-2xl font-black tracking-normal sm:text-3xl">需要这个产品的渠道资料？</h2>
+			</div>
+			<a
+				href="/cooperation/"
+				class="inline-flex min-h-11 items-center justify-center bg-[#e30613] px-6 text-sm font-black text-white transition hover:bg-[#c9000b]"
+			>
+				联系合作
+			</a>
+		</div>
+	</section>
+</SiteLayout>

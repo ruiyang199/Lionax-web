@@ -1,0 +1,237 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { productCategories } from '../data/products';
+
+const getSortedCategoryProducts = (category) =>
+	category.subCategories
+		.flatMap((subCategory) => subCategory.products)
+		.sort((firstProduct, secondProduct) =>
+			firstProduct.name.localeCompare(secondProduct.name, 'zh-CN')
+		);
+
+const hasVisibleSubCategories = (category) =>
+	category.subCategories.length > 1 ||
+	category.subCategories.some((subCategory) => subCategory.name !== category.name);
+
+const getCategoryMeta = (category) =>
+	hasVisibleSubCategories(category)
+		? `${category.subCategories.length} 个子分类`
+		: `${getSortedCategoryProducts(category).length} 个产品`;
+
+const getProductListImageClass = (product) =>
+	product.imageScale === 'powersports-oil'
+		? 'h-[86%] w-auto max-w-[82%] object-contain transition group-hover:scale-[1.03]'
+		: product.imageScale === 'automotive-oil'
+			? 'h-[78%] w-auto max-w-[92%] object-contain transition group-hover:scale-[1.03]'
+		: product.imageScale === 'detailing-jug'
+			? 'h-[88%] w-auto max-w-[82%] object-contain transition group-hover:scale-[1.03]'
+		: product.imageScale === 'detailing-bottle'
+			? 'h-[88%] w-auto max-w-[72%] object-contain transition group-hover:scale-[1.03]'
+		: 'max-h-full object-contain transition group-hover:scale-[1.03]';
+---
+
+<SiteLayout
+	current="products"
+	title="产品 | lionax 汽车润滑油与养护用品"
+	description="查看 lionax 润滑油、汽美产品、养护品和维修耗材分类，润滑油全系列从荷兰原罐原装。"
+>
+	<section class="overflow-hidden bg-white">
+		<h1 class="sr-only">产品</h1>
+		<img
+			src="/images/lionax-product-header.png"
+			alt="LIONAX 力耐国际 全球优势集成者，让世界优秀产品，更好为中国车主服务"
+			class="h-48 w-full object-cover object-center sm:mx-auto sm:h-auto sm:w-[65%] sm:object-contain"
+			width="2400"
+			height="1025"
+		/>
+	</section>
+
+	<section class="bg-neutral-100 pb-20 pt-8 sm:pb-24 sm:pt-10">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+				<aside class="lg:sticky lg:top-28 lg:self-start">
+					<div class="bg-white p-4 shadow-sm" data-product-tabs>
+						<p class="px-4 py-3 text-sm font-black uppercase text-[#e30613]">Category</p>
+						<div class="grid gap-2">
+							{productCategories.map((category, index) => (
+								<button
+									type="button"
+									class="product-tab w-full border-l-4 px-4 py-4 text-left transition"
+									data-tab-button={category.id}
+									data-default-subtab={`all-${category.id}`}
+									aria-controls={`panel-${category.id}`}
+									aria-selected={index === 0 ? 'true' : 'false'}
+								>
+									<span class="block text-lg font-black">{category.name}</span>
+									<span class="product-tab-meta mt-1 block text-sm transition">
+										{getCategoryMeta(category)}
+									</span>
+								</button>
+							))}
+						</div>
+					</div>
+				</aside>
+
+				<div class="min-w-0">
+					{productCategories.map((category, index) => (
+						<section
+							id={`panel-${category.id}`}
+							class:list={[index !== 0 && 'hidden']}
+							data-tab-panel={category.id}
+						>
+							<div class="bg-white p-7 shadow-sm">
+								<p class="text-sm font-black uppercase text-[#e30613]">Product Category</p>
+								<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950">{category.name}</h2>
+								<p class="mt-4 max-w-3xl text-lg leading-8 text-neutral-600">{category.desc}</p>
+								{hasVisibleSubCategories(category) && (
+									<div class="mt-7 flex flex-wrap gap-2" data-subtabs-for={category.id}>
+										<button
+											type="button"
+											class="product-subtab px-4 py-3 text-sm font-black transition"
+											data-subtab-button={`all-${category.id}`}
+											data-parent-category={category.id}
+											aria-controls={`subpanel-${category.id}-all`}
+											aria-selected="true"
+										>
+											全部
+										</button>
+										{category.subCategories.map((subCategory, subIndex) => (
+											<button
+												type="button"
+												class="product-subtab px-4 py-3 text-sm font-black transition"
+												data-subtab-button={subCategory.id}
+												data-parent-category={category.id}
+												aria-controls={`subpanel-${category.id}-${subCategory.id}`}
+												aria-selected="false"
+											>
+												{subCategory.name}
+											</button>
+										))}
+									</div>
+								)}
+							</div>
+
+							<div
+								id={`subpanel-${category.id}-all`}
+								class="mt-5"
+								data-subtab-panel={`all-${category.id}`}
+								data-parent-category={category.id}
+							>
+								<div class="grid gap-5 xl:grid-cols-2">
+									{getSortedCategoryProducts(category).map((product) => (
+										<a
+											href={`/products/${product.slug}/`}
+											class="group block bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+										>
+											<div class="flex aspect-[4/3] items-center justify-center bg-neutral-50 p-5">
+												<img
+													src={product.image}
+													alt={product.alt}
+													class={getProductListImageClass(product)}
+												/>
+											</div>
+											<div class="mt-6">
+												<h3 class="text-2xl font-black text-neutral-950">{product.name}</h3>
+												<p class="mt-3 inline-flex bg-[#e30613] px-3 py-2 text-sm font-black text-white">
+													{product.spec}
+												</p>
+												<p class="mt-4 text-base leading-7 text-neutral-600">{product.desc}</p>
+												<p class="mt-5 text-sm font-black text-[#e30613]">查看详情</p>
+											</div>
+										</a>
+									))}
+								</div>
+							</div>
+
+							{category.subCategories.map((subCategory, subIndex) => (
+								<div
+									id={`subpanel-${category.id}-${subCategory.id}`}
+									class="mt-5 hidden"
+									data-subtab-panel={subCategory.id}
+									data-parent-category={category.id}
+								>
+									<div class="grid gap-5 xl:grid-cols-2">
+										{subCategory.products.map((product) => (
+											<a
+												href={`/products/${product.slug}/`}
+												class="group block bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+											>
+												<div class="flex aspect-[4/3] items-center justify-center bg-neutral-50 p-5">
+													<img
+														src={product.image}
+														alt={product.alt}
+														class={getProductListImageClass(product)}
+													/>
+												</div>
+												<div class="mt-6">
+													<h3 class="text-2xl font-black text-neutral-950">{product.name}</h3>
+													<p class="mt-3 inline-flex bg-[#e30613] px-3 py-2 text-sm font-black text-white">
+														{product.spec}
+													</p>
+													<p class="mt-4 text-base leading-7 text-neutral-600">{product.desc}</p>
+													<p class="mt-5 text-sm font-black text-[#e30613]">查看详情</p>
+												</div>
+											</a>
+										))}
+									</div>
+								</div>
+							))}
+						</section>
+					))}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		const productTabs = document.querySelector('[data-product-tabs]');
+		const tabButtons = Array.from(document.querySelectorAll('[data-tab-button]'));
+		const tabPanels = Array.from(document.querySelectorAll('[data-tab-panel]'));
+		const subtabButtons = Array.from(document.querySelectorAll('[data-subtab-button]'));
+		const subtabPanels = Array.from(document.querySelectorAll('[data-subtab-panel]'));
+
+		function activateSubtab(parentCategory, activeSubtab) {
+			subtabButtons.forEach((button) => {
+				if (!(button instanceof HTMLButtonElement)) return;
+				if (button.dataset.parentCategory !== parentCategory) return;
+				button.setAttribute('aria-selected', String(button.dataset.subtabButton === activeSubtab));
+			});
+
+			subtabPanels.forEach((panel) => {
+				if (panel.getAttribute('data-parent-category') !== parentCategory) return;
+				panel.classList.toggle('hidden', panel.getAttribute('data-subtab-panel') !== activeSubtab);
+			});
+		}
+
+		productTabs?.addEventListener('click', (event) => {
+			const button = event.target.closest('[data-tab-button]');
+			if (!(button instanceof HTMLButtonElement)) return;
+
+			const activeId = button.dataset.tabButton;
+			if (!activeId) return;
+
+			tabButtons.forEach((tabButton) => {
+				const isActive = tabButton === button;
+				tabButton.setAttribute('aria-selected', String(isActive));
+			});
+
+			tabPanels.forEach((panel) => {
+				panel.classList.toggle('hidden', panel.getAttribute('data-tab-panel') !== activeId);
+			});
+
+			const defaultSubtab = button.dataset.defaultSubtab;
+			if (defaultSubtab) activateSubtab(activeId, defaultSubtab);
+		});
+
+		document.addEventListener('click', (event) => {
+			const button = event.target.closest('[data-subtab-button]');
+			if (!(button instanceof HTMLButtonElement)) return;
+
+			const parentCategory = button.dataset.parentCategory;
+			const activeSubtab = button.dataset.subtabButton;
+			if (!parentCategory || !activeSubtab) return;
+
+			activateSubtab(parentCategory, activeSubtab);
+		});
+	</script>
+</SiteLayout>
