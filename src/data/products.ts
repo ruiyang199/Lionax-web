@@ -2,7 +2,7 @@ export const productCategories = [
 	{
 		id: 'lubricants',
 		name: '润滑油',
-		desc: '润滑油全系列从荷兰原罐原装，覆盖汽车润滑油与 Powersports（动力运动）用油，可继续扩展不同粘度、容量和使用场景。',
+		desc: '润滑油全系列从荷兰原罐原装，覆盖汽车、摩托车和动力板用油，可继续扩展不同粘度、容量和使用场景。',
 		subCategories: [
 			{
 				id: 'automotive',
@@ -255,8 +255,8 @@ export const productCategories = [
 				],
 			},
 			{
-				id: 'powersports',
-				name: 'Powersports（动力运动）',
+				id: 'motorcycle',
+				name: '摩托车',
 				products: [
 					{
 						slug: 'x-racing-motorcycle-oil',
@@ -497,6 +497,12 @@ export const productCategories = [
 							['认证标准', 'API TC / JASO FD / GLOBAL GD / ISO-L-EGD / 2-Stroke DFI'],
 						],
 					},
+				],
+			},
+			{
+				id: 'power-board',
+				name: '动力板',
+				products: [
 					{
 						slug: 'dynamic-2t-powersports-oil',
 						name: 'Dynamic 2T Powersports 两冲程机油',
