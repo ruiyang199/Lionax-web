@@ -8,55 +8,34 @@ const categories = [
 	['维修耗材', '快保 / 维修辅料', '适配汽修、快保和补货场景。'],
 ];
 
-const strengths = [
-	['荷兰原罐原装', '力耐润滑油全系列从荷兰原罐原装，以稳定供应服务中国车主和门店渠道。'],
-	['全线覆盖', '从发动机润滑到汽美养护，再到维修耗材形成产品组合。'],
-	['渠道友好', '适合经销、电商、汽修快保和终端陈列多种销售方式。'],
-];
-
 const heroSlides = [
 	{
-		title: '润滑油系列',
-		desc: 'Engine oil series banner',
-		image: '/images/lionax-carousel-oil.png',
+		title: '释放激情',
+		desc: 'LIONAX 动力板用油 banner',
+		image: '/images/lionax-home-banner-1.png',
 	},
 	{
-		title: 'Powersports',
-		desc: 'Motorcycle, motocross and watercraft banner',
-		image: '/images/lionax-carousel-powersports.png',
+		title: '为速度而生',
+		desc: 'LIONAX 摩托车润滑油 banner',
+		image: '/images/lionax-home-banner-2.png',
+	},
+	{
+		title: '洁净，顺爽',
+		desc: 'LIONAX 汽车润滑油系列 banner',
+		image: '/images/lionax-home-banner-3.png',
 	},
 	{
 		title: '汽美产品',
-		desc: '清洁、护理与美容产品展示',
-		image: '/images/lionax-carousel-beauty.png',
+		desc: 'LIONAX 汽美产品系列 banner',
+		image: '/images/lionax-home-banner-4.png',
 	},
 	{
-		title: '养护耗材',
-		desc: '汽车养护与耗材系列 banner',
-		image: '/images/lionax-carousel-care.png',
+		title: '维修耗材',
+		desc: 'LIONAX 维修耗材系列 banner',
+		image: '/images/lionax-home-banner-5.png',
 	},
 ];
 
-const placeholders = [
-	{
-		title: '门店陈列',
-		desc: '品牌形象进店上墙，产品整齐陈列，让终端门店更有识别度。',
-		image: '/images/lionax-store-display.jpg',
-		alt: 'lionax 门店陈列照片',
-	},
-	{
-		title: '施工场景',
-		desc: '从开瓶到加注，每一次标准施工，都是对车辆表现的认真守护。',
-		image: '/images/lionax-service-scene.jpg',
-		alt: 'lionax 换油施工场景照片',
-	},
-	{
-		title: '赛事赞助',
-		desc: '走进真实赛场，以高强度赛事场景验证产品表现，持续强化 LIONAX 动力运动品牌声量。',
-		image: '/images/lionax-racing-sponsorship.jpg',
-		alt: 'lionax 赛事赞助现场照片',
-	},
-];
 ---
 
 <SiteLayout current="home">
@@ -131,7 +110,7 @@ const placeholders = [
 					以荷兰进口润滑油带动产品矩阵
 				</h2>
 				<p class="mt-5 text-lg leading-8 text-neutral-600">
-					为更好表现，LIONAX 以全系列荷兰原罐原装润滑油作为核心产品线，并覆盖汽美产品、养护品与维修耗材，围绕保养、清洁、养护和维修补货形成完整产品矩阵，为汽修门店、经销渠道和车主日常养护提供可组合的渠道货架。
+					力耐以全系列荷兰原罐原装润滑油为产品核心主线，并涵盖特种工业润滑产品、多功能养护气雾剂、全场景清洁剂、轨道交通专用养护品、全套汽车美容产品以及专业维修胶粘剂。全面满足汽车后市场与专业工业设备运维需求。
 				</p>
 				<a
 					href="/products/"
@@ -214,62 +193,6 @@ const placeholders = [
 			startSlides();
 		}
 	</script>
-
-	<section class="bg-white pb-20 pt-8 sm:pb-24 sm:pt-10">
-		<div class="mx-auto max-w-7xl px-5 sm:px-8">
-			<div class="max-w-3xl">
-				<p class="text-sm font-black uppercase text-[#e30613]">Why lionax</p>
-				<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">
-					从产品到渠道的品牌能力
-				</h2>
-			</div>
-			<div class="mt-10 grid gap-5 lg:grid-cols-3">
-				{strengths.map(([title, desc]) => (
-					<div class="border border-neutral-200 bg-white p-7 shadow-sm">
-						<div class="mb-8 h-1.5 w-16 bg-[#e30613]"></div>
-						<h3 class="text-2xl font-black text-neutral-950">{title}</h3>
-						<p class="mt-4 leading-7 text-neutral-600">{desc}</p>
-					</div>
-				))}
-			</div>
-		</div>
-	</section>
-
-	<section class="bg-neutral-950 py-20 text-white sm:py-24">
-		<div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">
-			<div>
-				<p class="text-sm font-black uppercase text-[#e30613]">Service & Display</p>
-				<h2 class="mt-3 text-4xl font-black tracking-normal sm:text-5xl">终端场景与服务支持</h2>
-				<p class="mt-5 text-lg leading-8 text-neutral-300">
-					从门店陈列到现场施工，LIONAX 将产品力、品牌形象和终端服务连接起来，让每一次养护都有清晰可见的专业感。
-				</p>
-			</div>
-			<div class="grid gap-4 sm:grid-cols-3">
-				{placeholders.map((item) => (
-					<div class="border border-white/10 bg-white/[0.06] p-5">
-						<div class:list={[
-							'flex aspect-square items-center justify-center overflow-hidden border border-dashed border-white/20 bg-white/[0.04] text-xs font-black uppercase text-white/35',
-							item.image && 'border-solid',
-						]}>
-							{item.image ? (
-								<img
-									src={item.image}
-									alt={item.alt}
-									class="h-full w-full object-cover"
-									width="1080"
-									height="1440"
-								/>
-							) : (
-								'Placeholder'
-							)}
-						</div>
-						<h3 class="mt-5 text-xl font-black">{item.title}</h3>
-						<p class="mt-3 text-sm leading-6 text-neutral-300">{item.desc}</p>
-					</div>
-				))}
-			</div>
-		</div>
-	</section>
 
 	<section class="bg-[#e30613] py-14 text-white">
 		<div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-5 sm:px-8 lg:flex-row lg:items-center">

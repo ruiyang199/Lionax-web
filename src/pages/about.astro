@@ -1,132 +1,92 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 
-const strengths = [
-	['全球优势集成者', '整合世界优秀产品与本地渠道服务，为中国车主带来更高品质的养护体验。'],
-	['荷兰原罐原装', '力耐润滑油全系列从荷兰原罐原装，甄选先进、严苛标准的欧洲产品。'],
-	['渠道覆盖', '全国销售渠道持续扩展，服务超过 500 万车主重复使用。'],
-	['长期服务', '为合作方提供技术、培训、销售工具和库存管理支持。'],
+const missionValues = [
+	{
+		title: '品质',
+		body: '绝不妥协。以达到欧洲严苛标准为底线，从原料、工艺、性能到稳定性，细细打磨，严控每一款产品质量，确保客户获得高性能使用体验。',
+	},
+	{
+		title: '服务',
+		body: '持续可靠。不止销售产品，更输出整套服务体系，从技术培训、门店标准化落地、品牌赋能、售后保障到区域保护、市场帮扶，全方位的服务，让合作者省心、安心。',
+	},
+	{
+		title: '价值',
+		body: '长期增值。高品质的产品带来稳定的客源，不断积累的市场口碑，为品牌持续赋能，实现品牌、渠道与终端消费者共生共赢。',
+	},
 ];
 
-const commitments = [
-	'让世界优秀产品，更好为中国车主服务。',
-	'润滑油全系列从荷兰原罐原装，按严苛标准引进。',
-	'以品质为核心，持续提升品牌价值与服务能力。',
+const performanceItems = [
+	{
+		title: '为渠道客户更好表现。',
+		body: '稳定可靠的高品质产品，为渠道客户带来稳定客源，并在市场口碑催化下，增厚客源数量与质量，令其形象与利润均有更好表现；',
+	},
+	{
+		title: '为使用者更好表现。',
+		body: '力耐的每一款产品都基于使用者的偏好而开发，汽车类产品使每位车主均能获得更好的驾驶体验；工业场景类产品则为每一位维修师傅提升效率，令其工作更加顺利出色。',
+	},
+	{
+		title: '为公司每一位参与者更好表现',
+		body: '力耐为团队中每一位成员提供独当一面的机会。会根据其发展目标制定分步实施计划，提供相应培训，以及对应发展平台，最终帮助成员实现长期职业发展愿望。',
+	},
+];
+
+const globalAdvantages = [
+	{
+		title: '全球原装采购',
+		body: '力耐一直坚持品质是硬指标，2007年开始进行全球原装采购。全世界范围内寻找优质、专业的产品，与具有顶尖的科技团队、领先资质的生产商合作，确保产品优质性能和良好用户体验。',
+	},
+	{
+		title: '标准严苛',
+		body: '力耐所有产品均要求达到先进的行业标准，核心产品更是达到汽车工业特别发达也特别严格的欧盟标准。',
+	},
+	{
+		title: '环保，为每位使用者负责',
+		body: '力耐在开发、引进每一个产品时，均注重环保要求，要求其符合欧盟环保标准或国家环保标准，保证每位客户使用放心产品。',
+	},
 ];
 ---
 
 <SiteLayout
 	current="about"
 	title="关于 | lionax 汽车润滑油与养护用品"
-	description="了解广州力耐国际贸易有限公司、力耐 LIONAX 品牌理念、全国销售渠道和合作服务支持。"
+	description="了解广州力耐国际贸易有限公司、力耐 LIONAX 品牌使命、品牌理念和公司介绍。"
 >
-	<section class="bg-white py-12 sm:py-16">
-		<div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
-			<div>
-				<p class="text-sm font-black uppercase text-[#e30613]">About lionax</p>
-				<h1 class="mt-3 text-5xl font-black leading-tight tracking-normal text-neutral-950 sm:text-6xl">
-					关于
-				</h1>
-				<p class="mt-6 text-xl leading-8 text-neutral-700">
-					广州力耐国际贸易有限公司是力耐 LIONAX 品牌运营商，也是汽车润滑油、养护品进口商。
-				</p>
-				<p class="mt-5 text-lg leading-8 text-neutral-600">
-					公司以“让世界优秀产品，更好为中国车主服务”为己任，力耐润滑油全系列从荷兰原罐原装，甄选先进、标准严苛的欧洲产品，只为提供更好的驾乘体验。
-				</p>
-			</div>
-			<div class="bg-neutral-50 p-8">
-				<img
-					src="/images/lionax-logo.png"
-					alt="lionax 红色品牌 logo"
-					class="mx-auto max-h-80 object-contain"
-					width="1060"
-					height="1484"
-				/>
-			</div>
-		</div>
-	</section>
-
 	<section class="bg-neutral-100 py-12 sm:py-16">
-		<div class="mx-auto max-w-7xl px-5 sm:px-8">
-			<div class="mb-8 max-w-3xl">
-				<p class="text-sm font-black uppercase text-[#e30613]">Our Team</p>
-				<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">我们的团队</h2>
-			</div>
-			<div class="grid gap-5 lg:grid-cols-2">
-				<figure class="bg-white p-4 shadow-sm">
-					<img
-						src="/images/lionax-team-football.png"
-						alt="力耐团队足球活动合影"
-						class="aspect-[29/18] w-full object-cover"
-						width="580"
-						height="360"
-					/>
-				</figure>
-				<figure class="bg-white p-4 shadow-sm">
-					<img
-						src="/images/lionax-team-event.png"
-						alt="力耐团队活动合影"
-						class="aspect-[29/18] w-full object-cover"
-						width="580"
-						height="360"
-					/>
-				</figure>
+		<div class="mx-auto max-w-5xl px-5 sm:px-8">
+			<p class="text-sm font-black uppercase text-[#e30613]">Brand Mission</p>
+			<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">品牌使命</h2>
+			<div class="mt-8 grid gap-5">
+				<div class="border-l-4 border-[#e30613] bg-white p-6 shadow-sm">
+					<h3 class="text-2xl font-black text-neutral-950">力耐愿景：成为一个持续增长的百年品牌</h3>
+				</div>
+				<div class="border-l-4 border-[#e30613] bg-white p-6 shadow-sm">
+					<h3 class="text-2xl font-black text-neutral-950">力耐理念：品质 服务 价值</h3>
+					<div class="mt-6 grid gap-5">
+						{missionValues.map((item) => (
+							<div class="border-t border-neutral-200 pt-5">
+								<h4 class="text-lg font-black text-[#e30613]">{item.title}</h4>
+								<p class="mt-3 text-base leading-7 text-neutral-700">{item.body}</p>
+							</div>
+						))}
+					</div>
+				</div>
+				<div class="border-l-4 border-[#e30613] bg-white p-6 shadow-sm">
+					<h3 class="text-2xl font-black text-neutral-950">力耐口号：为更好表现</h3>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="bg-neutral-950 py-12 text-white sm:py-16">
-		<div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-			<div>
-				<p class="text-sm font-black uppercase text-[#e30613]">For Better Performance</p>
-				<h2 class="mt-3 text-4xl font-black tracking-normal sm:text-5xl">为更好表现</h2>
-				<div class="mt-7 space-y-5 text-lg leading-8 text-neutral-300">
-					<p>
-						一直以来，力耐都将“追求更好”奉为品牌目标，精品精神已深入骨髓。公司寻求世界领先技术，与欧洲顶尖制造商深度合作，紧随不断升级的汽车制造工艺。
-					</p>
-					<p>
-						力耐严格按照汽车制造厂商要求，开发贴合市场的先进产品。其中润滑油全系列从荷兰原罐原装，使核心产品务必达到国际高等级的使用与检验标准，并有所超越。
-					</p>
-					<p>
-						如今，力耐以品质为核心，不断锐意进取、深耕服务，其版图正在快速扩大，全国超过 500 万车主已在重复使用力耐产品。
-					</p>
-				</div>
-			</div>
-			<div class="bg-white p-5">
-				<img
-					src="/images/lionax-distribution-map-new.png"
-					alt="力耐销售渠道分布地图"
-					class="w-full object-contain"
-					width="1398"
-					height="1518"
-				/>
-			</div>
-		</div>
-	</section>
-
-	<section class="bg-white py-12 sm:py-16">
-		<div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
-			<div>
-				<p class="text-sm font-black uppercase text-[#e30613]">Brand Mission</p>
-				<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">品牌使命</h2>
-			</div>
-			<div class="grid gap-4">
-				{commitments.map((item) => (
-					<div class="border-l-4 border-[#e30613] bg-neutral-50 p-6 text-xl font-black leading-8 text-neutral-950">
-						{item}
-					</div>
-				))}
-			</div>
-		</div>
-	</section>
-
-	<section class="bg-neutral-100 py-12 sm:py-16">
-		<div class="mx-auto max-w-7xl px-5 sm:px-8">
-			<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-				{strengths.map(([title, body]) => (
-					<div class="border border-neutral-200 bg-white p-6 shadow-sm">
-						<h2 class="text-xl font-black text-[#e30613]">{title}</h2>
-						<p class="mt-3 text-sm leading-6 text-neutral-600">{body}</p>
+		<div class="mx-auto max-w-5xl px-5 sm:px-8">
+			<p class="text-sm font-black uppercase text-[#e30613]">For Better Performance</p>
+			<h2 class="mt-3 text-4xl font-black tracking-normal sm:text-5xl">为更好表现</h2>
+			<div class="mt-8 grid gap-5">
+				{performanceItems.map((item) => (
+					<div class="border border-white/10 bg-white/[0.06] p-6">
+						<h3 class="text-2xl font-black text-white">——{item.title}</h3>
+						<p class="mt-4 text-lg leading-8 text-neutral-300">{item.body}</p>
 					</div>
 				))}
 			</div>
@@ -135,21 +95,25 @@ const commitments = [
 
 	<section class="bg-white py-12 sm:py-16">
 		<div class="mx-auto max-w-5xl px-5 sm:px-8">
-			<p class="text-sm font-black uppercase text-[#e30613]">Partner Support</p>
-			<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">与合作方共同成长</h2>
-			<div class="mt-8 space-y-5 text-lg leading-9 text-neutral-700">
-				<p>
-					力耐国际秉承力耐 LIONAX 品牌理念，为合作方提供优质的力耐 LIONAX 全系列产品，同时与合作方并肩工作，一起寻找与改进生产中所遇到的问题。
-				</p>
-				<p>
-					公司设立专业部门和技术人员负责售后服务事宜，以一丝不苟的工作作风，为合作方及时提供技术支持与培训，并随时保持技术信息交流。
-				</p>
-				<p>
-					力耐也为合作者提供有效的销售工具支持和库存管理支持，以节约成本、简化手续，形成长期良性发展，实现利润最大化，达到双赢，并最终让消费者满意。
-				</p>
-				<p>
-					未来，力耐国际将一如既往履行对客户的承诺，并继续深化与客户的合作伙伴关系，不断为客户需求寻找革新的解决方案。
-				</p>
+			<p class="text-sm font-black uppercase text-[#e30613]">Company</p>
+			<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">关于公司</h2>
+			<p class="mt-8 text-xl leading-9 text-neutral-700">
+				广州力耐国际贸易有限公司----力耐 LIONAX 品牌运营商，聚集汽车、摩托车后市场与工业运维领域的专业服务型公司。高端品质产品覆盖家用汽车、摩托车、摩托艇、动力板、工程机械、车用运维、高铁、轨道交通、工业清洁养护等。公司以“让世界优秀产品，更好为中国服务”为己任，甄选先进的、标准严苛的欧洲产品，原装原罐引进，只为消费者提供更好的使用体验。
+			</p>
+		</div>
+	</section>
+
+	<section class="bg-neutral-100 py-12 sm:py-16">
+		<div class="mx-auto max-w-5xl px-5 sm:px-8">
+			<p class="text-sm font-black uppercase text-[#e30613]">Global Integrator</p>
+			<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">全球优势集成者</h2>
+			<div class="mt-8 grid gap-4 lg:grid-cols-3">
+				{globalAdvantages.map((item) => (
+					<div class="border-l-4 border-[#e30613] bg-white p-6 shadow-sm">
+						<h3 class="text-xl font-black text-neutral-950">{item.title}</h3>
+						<p class="mt-4 text-sm leading-7 text-neutral-600">{item.body}</p>
+					</div>
+				))}
 			</div>
 		</div>
 	</section>
