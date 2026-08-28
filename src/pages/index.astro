@@ -2,10 +2,10 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 
 const categories = [
-	['润滑油', '动力板 / 摩托车 / 汽车', '全系列荷兰原罐原装，覆盖动力板、摩托车与汽车用油。'],
-	['汽美产品', '清洁 / 漆面护理', '面向洗车、美容和外观护理。'],
-	['养护品', '冷却 / 添加剂', '覆盖日常保养与功能维护。'],
-	['维修耗材', '快保 / 维修辅料', '适配汽修、快保和补货场景。'],
+	['润滑油', '动力板 / 摩托车 / 汽车', '全系列荷兰原罐原装，覆盖动力板、摩托车与汽车用油。', '/products/?category=lubricants'],
+	['汽美产品', '清洁 / 漆面护理', '面向洗车、美容和外观护理。', '/products/?category=beauty'],
+	['养护品', '冷却 / 添加剂', '覆盖日常保养与功能维护。', '/products/?category=care'],
+	['维修耗材', '快保 / 维修辅料', '适配汽修、快保和补货场景。', '/products/?category=consumables'],
 ];
 
 const heroSlides = [
@@ -92,8 +92,8 @@ const heroSlides = [
 
 	<section class="bg-white py-12">
 		<div class="mx-auto grid max-w-7xl grid-cols-4 gap-px bg-neutral-200 px-3 sm:px-8">
-			{categories.map(([title, meta, desc]) => (
-				<a href="/products/" class="group bg-white px-2 py-3 transition hover:bg-[#e30613] sm:p-6">
+			{categories.map(([title, meta, desc, href]) => (
+				<a href={href} class="group bg-white px-2 py-3 transition hover:bg-[#e30613] sm:p-6">
 					<p class="text-[10px] font-black uppercase leading-tight text-[#e30613] transition group-hover:text-neutral-950 sm:text-sm">{meta}</p>
 					<h2 class="mt-1.5 text-base font-black leading-tight text-neutral-950 transition group-hover:text-white sm:mt-3 sm:text-2xl">{title}</h2>
 					<p class="mt-1.5 text-[11px] leading-snug text-neutral-600 transition group-hover:text-white sm:mt-3 sm:text-base sm:leading-7">{desc}</p>

@@ -203,15 +203,12 @@ const getProductListImageClass = (product) =>
 			});
 		}
 
-		productTabs?.addEventListener('click', (event) => {
-			const button = event.target.closest('[data-tab-button]');
-			if (!(button instanceof HTMLButtonElement)) return;
-
-			const activeId = button.dataset.tabButton;
-			if (!activeId) return;
+		function activateCategory(activeId, shouldUpdateUrl = false) {
+			const activeButton = tabButtons.find((button) => button.dataset.tabButton === activeId);
+			if (!(activeButton instanceof HTMLButtonElement)) return;
 
 			tabButtons.forEach((tabButton) => {
-				const isActive = tabButton === button;
+				const isActive = tabButton === activeButton;
 				tabButton.setAttribute('aria-selected', String(isActive));
 			});
 
@@ -219,8 +216,23 @@ const getProductListImageClass = (product) =>
 				panel.classList.toggle('hidden', panel.getAttribute('data-tab-panel') !== activeId);
 			});
 
-			const defaultSubtab = button.dataset.defaultSubtab;
+			const defaultSubtab = activeButton.dataset.defaultSubtab;
 			if (defaultSubtab) activateSubtab(activeId, defaultSubtab);
+
+			if (shouldUpdateUrl) {
+				const url = new URL(window.location.href);
+				url.searchParams.set('category', activeId);
+				window.history.replaceState({}, '', url);
+			}
+		}
+
+		productTabs?.addEventListener('click', (event) => {
+			const button = event.target.closest('[data-tab-button]');
+			if (!(button instanceof HTMLButtonElement)) return;
+
+			const activeId = button.dataset.tabButton;
+			if (!activeId) return;
+			activateCategory(activeId, true);
 		});
 
 		document.addEventListener('click', (event) => {
@@ -233,5 +245,8 @@ const getProductListImageClass = (product) =>
 
 			activateSubtab(parentCategory, activeSubtab);
 		});
+
+		const initialCategory = new URLSearchParams(window.location.search).get('category');
+		if (initialCategory) activateCategory(initialCategory);
 	</script>
 </SiteLayout>
