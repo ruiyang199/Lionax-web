@@ -2,7 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 
 const categories = [
-	['润滑油', '动力板 / 摩托车 / 汽车', '全系列荷兰原罐原装，覆盖动力板、摩托车与汽车用油。', '/products/?category=lubricants'],
+	['润滑油', '动力板 / 摩托车 / 汽车', '力耐机油全系列荷兰原罐原装，覆盖动力板、摩托车与汽车用油。', '/lubricants/'],
 	['汽美产品', '清洁 / 漆面护理', '面向洗车、美容和外观护理。', '/products/?category=beauty'],
 	['养护品', '冷却 / 添加剂', '覆盖日常保养与功能维护。', '/products/?category=care'],
 	['维修耗材', '快保 / 维修辅料', '适配汽修、快保和补货场景。', '/products/?category=consumables'],
@@ -11,34 +11,39 @@ const categories = [
 const heroSlides = [
 	{
 		title: '释放激情',
-		desc: 'LIONAX 动力板用油 banner',
-		image: '/images/lionax-home-banner-1.png',
+		desc: '力耐 LIONAX 动力板两冲程机油与动力运动润滑油',
+		image: '/images/lionax-home-banner-1.webp',
 	},
 	{
 		title: '为速度而生',
-		desc: 'LIONAX 摩托车润滑油 banner',
-		image: '/images/lionax-home-banner-2.png',
+		desc: '力耐 LIONAX 荷兰原装摩托车机油',
+		image: '/images/lionax-home-banner-2.webp',
 	},
 	{
 		title: '洁净，顺爽',
-		desc: 'LIONAX 汽车润滑油系列 banner',
-		image: '/images/lionax-home-banner-3.png',
+		desc: '力耐 LIONAX 荷兰原装汽车机油与发动机润滑油',
+		image: '/images/lionax-home-banner-3.webp',
 	},
 	{
 		title: '汽美产品',
-		desc: 'LIONAX 汽美产品系列 banner',
-		image: '/images/lionax-home-banner-4.png',
+		desc: '力耐 LIONAX 汽车美容清洁与漆面护理产品',
+		image: '/images/lionax-home-banner-4.webp',
 	},
 	{
 		title: '维修耗材',
-		desc: 'LIONAX 维修耗材系列 banner',
-		image: '/images/lionax-home-banner-5.png',
+		desc: '力耐 LIONAX 汽车维修耗材与专业维修辅料',
+		image: '/images/lionax-home-banner-5.webp',
 	},
 ];
 
 ---
 
-<SiteLayout current="home">
+<SiteLayout
+	current="home"
+	title="力耐机油官网 | LIONAX 荷兰原装润滑油与汽车养护用品"
+	description="力耐（LIONAX）机油官网，提供荷兰原罐原装汽车机油、摩托车机油、动力运动润滑油，以及汽车养护品、汽美产品和维修耗材。"
+	keywords={['力耐机油', '力耐', 'LIONAX', '力耐官网', '荷兰原装机油', '汽车机油', '摩托车机油']}
+>
 	<section class="relative aspect-[2048/768] max-h-[560px] w-full overflow-hidden bg-neutral-950 text-white" aria-label="首页轮播图">
 		<div class="absolute inset-0" data-hero-carousel>
 			{heroSlides.map((slide, index) => (
@@ -57,6 +62,9 @@ const heroSlides = [
 							class="absolute inset-0 h-full w-full object-contain"
 							width="2048"
 							height="768"
+							loading={index === 0 ? 'eager' : 'lazy'}
+							fetchpriority={index === 0 ? 'high' : 'auto'}
+							decoding="async"
 						/>
 					) : (
 						<>
@@ -87,6 +95,18 @@ const heroSlides = [
 					aria-current={index === 0 ? 'true' : 'false'}
 				></button>
 			))}
+		</div>
+	</section>
+
+	<section class="border-b border-neutral-200 bg-white py-9 sm:py-12">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<p class="text-sm font-black uppercase text-[#e30613]">LIONAX Official Website</p>
+			<h1 class="mt-3 max-w-5xl text-3xl font-black tracking-normal text-neutral-950 sm:text-5xl">
+				力耐 LIONAX 机油与汽车养护用品
+			</h1>
+			<p class="mt-5 max-w-4xl text-base leading-8 text-neutral-600 sm:text-lg">
+				力耐专注汽车后市场与动力运动养护，以荷兰原罐原装润滑油为核心，覆盖汽车机油、摩托车机油、两冲程与四冲程动力运动用油，并提供汽美、养护和维修耗材产品。
+			</p>
 		</div>
 	</section>
 
@@ -121,11 +141,13 @@ const heroSlides = [
 			</div>
 			<div class="overflow-hidden bg-white p-6 shadow-sm">
 				<img
-					src="/images/lionax-family-hero.png"
+					src="/images/lionax-family-hero.webp"
 					alt="lionax 产品组合"
 					class="mx-auto max-h-[380px] w-full scale-[2] object-contain"
 					width="1055"
 					height="1491"
+					loading="lazy"
+					decoding="async"
 				/>
 			</div>
 		</div>
@@ -143,11 +165,13 @@ const heroSlides = [
 				</p>
 			</div>
 			<img
-				src="/images/lionax-carousel-netherlands.png"
+				src="/images/lionax-carousel-netherlands.webp"
 				alt="lionax 荷兰原罐原装说明图"
 				class="w-full object-contain"
 				width="2048"
 				height="768"
+				loading="lazy"
+				decoding="async"
 			/>
 		</div>
 	</section>

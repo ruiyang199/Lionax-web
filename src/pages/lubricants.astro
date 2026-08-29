@@ -1,0 +1,196 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { productCategories } from '../data/products';
+
+const lubricants = productCategories.find((category) => category.id === 'lubricants');
+
+if (!lubricants) {
+	throw new Error('润滑油分类不存在');
+}
+
+const products = lubricants.subCategories.flatMap((subCategory) =>
+	subCategory.products.map((product) => ({
+		...product,
+		subCategoryName: subCategory.name,
+	})),
+);
+const siteUrl = Astro.site ?? new URL('https://l-lionax.com');
+
+const faqItems = [
+	{
+		question: '力耐机油是什么品牌？',
+		answer: '力耐 LIONAX 是广州力耐国际贸易有限公司运营的汽车后市场品牌，官网提供汽车机油、摩托车机油、动力运动用油及汽车养护产品信息。',
+	},
+	{
+		question: '力耐机油有哪些类型？',
+		answer: '力耐润滑油系列覆盖汽车发动机油、四冲程摩托车机油、两冲程机油，以及摩托艇和动力板等 Powersports 动力运动使用场景。',
+	},
+	{
+		question: '力耐润滑油在哪里生产？',
+		answer: '力耐官网当前展示的润滑油系列采用荷兰原罐原装体系。具体产品的粘度、容量、认证标准和适用场景，请以对应产品详情页信息为准。',
+	},
+	{
+		question: '怎样选择合适的力耐机油？',
+		answer: '应先遵循车辆或设备制造商手册要求，再根据发动机类型、粘度等级、适用标准和使用环境选择。无法确认时，可联系力耐获取产品资料。',
+	},
+];
+
+const structuredData = [
+	{
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: '力耐官网',
+				item: siteUrl.href,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: '力耐机油',
+				item: new URL('/lubricants/', siteUrl).href,
+			},
+		],
+	},
+	{
+		'@type': 'ItemList',
+		name: '力耐 LIONAX 机油与润滑油系列',
+		numberOfItems: products.length,
+		itemListElement: products.map((product, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: `${product.name} ${product.spec}`,
+			url: new URL(`/products/${product.slug}/`, siteUrl).href,
+		})),
+	},
+	{
+		'@type': 'FAQPage',
+		mainEntity: faqItems.map((item) => ({
+			'@type': 'Question',
+			name: item.question,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: item.answer,
+			},
+		})),
+	},
+];
+
+const getProductImageClass = (product) =>
+	product.imageScale === 'powersports-oil'
+		? 'h-[86%] w-auto max-w-[82%] object-contain transition group-hover:scale-[1.03]'
+		: 'h-[78%] w-auto max-w-[92%] object-contain transition group-hover:scale-[1.03]';
+---
+
+<SiteLayout
+	current="products"
+	title="力耐机油 | 荷兰原装汽车机油与摩托车润滑油 - LIONAX"
+	description="了解力耐 LIONAX 荷兰原罐原装机油系列，覆盖汽车机油、摩托车机油、2T/4T 动力运动润滑油，并查看粘度、规格与适用场景。"
+	keywords={['力耐机油', '力耐润滑油', 'LIONAX 机油', '荷兰原装机油', '汽车机油', '摩托车机油', '全合成机油']}
+	pageSchemaType="CollectionPage"
+	structuredData={structuredData}
+>
+	<section class="bg-neutral-950 py-14 text-white sm:py-20">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<nav aria-label="面包屑" class="text-sm font-bold text-neutral-400">
+				<a href="/" class="transition hover:text-white">首页</a>
+				<span aria-hidden="true" class="mx-2">/</span>
+				<span class="text-white">力耐机油</span>
+			</nav>
+			<p class="mt-8 text-sm font-black uppercase text-[#e30613]">LIONAX Lubricants</p>
+			<h1 class="mt-3 max-w-5xl text-4xl font-black leading-tight tracking-normal sm:text-6xl">
+				力耐机油：荷兰原装汽车机油与摩托车润滑油
+			</h1>
+			<p class="mt-6 max-w-4xl text-lg leading-8 text-neutral-300">
+				力耐 LIONAX 润滑油系列坚持荷兰原罐原装，覆盖家用汽车、摩托车、摩托艇、动力板及其他 Powersports 动力运动场景。可按发动机类型、粘度等级、产品标准和使用环境查看对应产品资料。
+			</p>
+		</div>
+	</section>
+
+	<section class="bg-white py-14 sm:py-20">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<div class="grid gap-6 lg:grid-cols-3">
+				<div class="border-l-4 border-[#e30613] bg-neutral-50 p-6">
+					<h2 class="text-2xl font-black text-neutral-950">力耐汽车机油</h2>
+					<p class="mt-4 leading-7 text-neutral-600">覆盖不同粘度等级的汽车发动机润滑油，产品详情页列明规格、适用场景与可确认的标准信息。</p>
+				</div>
+				<div class="border-l-4 border-[#e30613] bg-neutral-50 p-6">
+					<h2 class="text-2xl font-black text-neutral-950">力耐摩托车机油</h2>
+					<p class="mt-4 leading-7 text-neutral-600">包含四冲程、两冲程及 PAO 等系列，面向摩托车发动机、变速箱和湿式离合器等使用场景。</p>
+				</div>
+				<div class="border-l-4 border-[#e30613] bg-neutral-50 p-6">
+					<h2 class="text-2xl font-black text-neutral-950">动力运动润滑油</h2>
+					<p class="mt-4 leading-7 text-neutral-600">覆盖摩托艇、动力板和两冲程动力设备等高负荷 Powersports 场景，按设备要求选择适配产品。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-neutral-100 py-14 sm:py-20">
+		<div class="mx-auto max-w-7xl px-5 sm:px-8">
+			<div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+				<div>
+					<p class="text-sm font-black uppercase text-[#e30613]">Product Range</p>
+					<h2 class="mt-3 text-3xl font-black tracking-normal text-neutral-950 sm:text-5xl">力耐润滑油产品系列</h2>
+				</div>
+				<a href="/products/" class="text-sm font-black text-[#e30613] transition hover:text-neutral-950">浏览全部力耐产品 →</a>
+			</div>
+
+			{lubricants.subCategories.map((subCategory) => (
+				<section class="mt-12" aria-labelledby={`lubricants-${subCategory.id}`}>
+					<div class="flex items-end justify-between gap-4 border-b border-neutral-300 pb-4">
+						<h3 id={`lubricants-${subCategory.id}`} class="text-2xl font-black text-neutral-950">{subCategory.name}用油</h3>
+						<p class="text-sm font-bold text-neutral-500">{subCategory.products.length} 款产品</p>
+					</div>
+					<div class="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+						{subCategory.products.map((product) => (
+							<a href={`/products/${product.slug}/`} class="group block bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+								<div class="flex aspect-[4/3] items-center justify-center bg-neutral-50 p-4">
+									<img
+										src={product.image}
+										alt={product.alt}
+										class={getProductImageClass(product)}
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<h4 class="mt-5 text-xl font-black text-neutral-950">{product.name}</h4>
+								<p class="mt-3 inline-flex bg-[#e30613] px-3 py-2 text-sm font-black text-white">{product.spec}</p>
+								<p class="mt-4 line-clamp-3 text-sm leading-7 text-neutral-600">{product.desc}</p>
+								<p class="mt-4 text-sm font-black text-[#e30613]">查看机油详情</p>
+							</a>
+						))}
+					</div>
+				</section>
+			))}
+		</div>
+	</section>
+
+	<section class="bg-white py-14 sm:py-20">
+		<div class="mx-auto max-w-5xl px-5 sm:px-8">
+			<p class="text-sm font-black uppercase text-[#e30613]">FAQ</p>
+			<h2 class="mt-3 text-3xl font-black tracking-normal text-neutral-950 sm:text-5xl">力耐机油常见问题</h2>
+			<div class="mt-8 divide-y divide-neutral-200 border-y border-neutral-200">
+				{faqItems.map((item) => (
+					<details class="group py-5">
+						<summary class="cursor-pointer list-none pr-8 text-lg font-black text-neutral-950">{item.question}</summary>
+						<p class="mt-4 max-w-4xl leading-7 text-neutral-600">{item.answer}</p>
+					</details>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-[#e30613] py-12 text-white">
+		<div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-5 sm:px-8 lg:flex-row lg:items-center">
+			<div>
+				<p class="text-sm font-black uppercase text-white/75">Product Support</p>
+				<h2 class="mt-2 text-2xl font-black sm:text-3xl">需要力耐机油产品资料或渠道合作方案？</h2>
+			</div>
+			<a href="/cooperation/" class="inline-flex min-h-12 items-center justify-center bg-white px-6 text-sm font-black text-[#e30613] transition hover:bg-neutral-100">
+				联系力耐
+			</a>
+		</div>
+	</section>
+</SiteLayout>

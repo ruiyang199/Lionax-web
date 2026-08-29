@@ -3,13 +3,90 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import { getProductEntries } from '../../data/products';
 
 export function getStaticPaths() {
-	return getProductEntries().map((product) => ({
+	const products = getProductEntries();
+
+	return products.map((product) => ({
 		params: { slug: product.slug },
-		props: { product },
+		props: {
+			product,
+			relatedProducts: products
+				.filter((candidate) =>
+					candidate.slug !== product.slug && candidate.subCategoryId === product.subCategoryId
+				)
+				.slice(0, 3),
+		},
 	}));
 }
 
-const { product } = Astro.props;
+const { product, relatedProducts } = Astro.props;
+const siteUrl = Astro.site ?? new URL('https://l-lionax.com');
+const productUrl = new URL(`/products/${product.slug}/`, siteUrl).href;
+const productImage = new URL(product.image, siteUrl).href;
+const uniqueSpecParts = product.spec
+	.split('/')
+	.map((part) => part.trim())
+	.filter((part) => {
+		const normalizedPart = part.replace(/^SAE\s+/i, '').toLocaleLowerCase('zh-CN');
+		return normalizedPart && !product.name.toLocaleLowerCase('zh-CN').includes(normalizedPart);
+	});
+const productTitle = [product.name, uniqueSpecParts.join(' / ')]
+	.filter(Boolean)
+	.join(' ')
+	.replace(/\s+/g, ' ')
+	.trim();
+const seoDescription = `力耐 LIONAX ${productTitle}。${product.desc}`;
+const categoryUrl = product.categoryId === 'lubricants'
+	? new URL('/lubricants/', siteUrl).href
+	: new URL('/products/', siteUrl).href;
+const categoryHref = product.categoryId === 'lubricants'
+	? '/lubricants/'
+	: `/products/?category=${product.categoryId}`;
+
+const breadcrumbItems = [
+	{
+		'@type': 'ListItem',
+		position: 1,
+		name: '力耐官网',
+		item: siteUrl.href,
+	},
+	{
+		'@type': 'ListItem',
+		position: 2,
+		name: product.categoryId === 'lubricants' ? '力耐机油' : '产品中心',
+		item: categoryUrl,
+	},
+	{
+		'@type': 'ListItem',
+		position: 3,
+		name: productTitle,
+		item: productUrl,
+	},
+];
+
+const structuredData = [
+	{
+		'@type': 'BreadcrumbList',
+		itemListElement: breadcrumbItems,
+	},
+	{
+		'@type': 'Product',
+		'@id': `${productUrl}#product`,
+		name: `力耐 LIONAX ${productTitle}`,
+		url: productUrl,
+		image: [productImage],
+		description: product.desc,
+		brand: {
+			'@type': 'Brand',
+			name: '力耐 LIONAX',
+		},
+		category: `${product.categoryName} > ${product.subCategoryName}`,
+		additionalProperty: product.parameters.map(([label, value]) => ({
+			'@type': 'PropertyValue',
+			name: label,
+			value,
+		})),
+	},
+];
 
 const productDetailImageClass =
 	product.imageScale === 'powersports-oil'
@@ -25,15 +102,27 @@ const productDetailImageClass =
 
 <SiteLayout
 	current="products"
-	title={`${product.name} | lionax 产品详情`}
-	description={product.desc}
+	title={`${productTitle} | 力耐 LIONAX`}
+	description={seoDescription}
+	keywords={['力耐机油', 'LIONAX', product.name, product.spec, product.categoryName, product.subCategoryName]}
+	image={product.image}
+	imageAlt={product.alt}
+	openGraphType="product"
+	pageSchemaType="ItemPage"
+	structuredData={structuredData}
 >
 	<section class="bg-neutral-950 py-10 text-white sm:py-12">
 		<div class="mx-auto max-w-7xl px-5 sm:px-8">
-			<a href="/products/" class="text-sm font-black uppercase text-[#e30613] transition hover:text-white">返回产品列表</a>
+			<nav aria-label="面包屑" class="flex flex-wrap items-center gap-2 text-sm font-bold text-neutral-400">
+				<a href="/" class="transition hover:text-white">首页</a>
+				<span aria-hidden="true">/</span>
+				<a href={categoryHref} class="transition hover:text-white">{product.categoryName}</a>
+				<span aria-hidden="true">/</span>
+				<span class="text-white">{product.name}</span>
+			</nav>
 			<p class="mt-5 text-sm font-black uppercase text-[#e30613]">Product Detail</p>
 			<h1 class="mt-2 max-w-5xl text-4xl font-black leading-tight tracking-normal sm:text-5xl">
-				{product.name}
+				{productTitle}
 			</h1>
 			<p class="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">{product.desc}</p>
 		</div>
@@ -48,6 +137,7 @@ const productDetailImageClass =
 							src={product.image}
 							alt={product.alt}
 							class={productDetailImageClass}
+							decoding="async"
 						/>
 					</div>
 				</div>
@@ -107,7 +197,7 @@ const productDetailImageClass =
 						{product.detailSections.map((section) => (
 							<article class="border border-neutral-200 bg-neutral-50">
 								<div class="flex aspect-[4/3] items-center justify-center bg-white p-3">
-									<img src={section.image} alt={section.alt} class="max-h-full w-full object-contain" />
+									<img src={section.image} alt={section.alt} class="max-h-full w-full object-contain" loading="lazy" decoding="async" />
 								</div>
 								<div class="p-5">
 									<h3 class="text-xl font-black text-neutral-950">{section.title}</h3>
@@ -117,6 +207,24 @@ const productDetailImageClass =
 						))}
 					</div>
 				</div>
+			)}
+
+			{relatedProducts.length > 0 && (
+				<section class="mt-6 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="related-products-heading">
+					<p class="text-sm font-black uppercase text-[#e30613]">Related Products</p>
+					<h2 id="related-products-heading" class="mt-2 text-3xl font-black tracking-normal text-neutral-950">同类产品</h2>
+					<div class="mt-6 grid gap-4 md:grid-cols-3">
+						{relatedProducts.map((relatedProduct) => (
+							<a href={`/products/${relatedProduct.slug}/`} class="group border border-neutral-200 bg-neutral-50 p-4 transition hover:border-[#e30613]">
+								<div class="flex aspect-[4/3] items-center justify-center bg-white p-3">
+									<img src={relatedProduct.image} alt={relatedProduct.alt} class="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
+								</div>
+								<h3 class="mt-4 text-lg font-black text-neutral-950 transition group-hover:text-[#e30613]">{relatedProduct.name}</h3>
+								<p class="mt-2 text-sm font-bold text-neutral-600">{relatedProduct.spec}</p>
+							</a>
+						))}
+					</div>
+				</section>
 			)}
 		</div>
 	</section>

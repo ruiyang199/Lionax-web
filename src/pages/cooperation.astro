@@ -5,32 +5,55 @@ const serviceItems = [
 	{
 		title: '门店陈列',
 		desc: '品牌形象进店上墙，产品整齐陈列，让终端门店更有识别度。',
-		image: '/images/lionax-store-display.jpg',
+		image: '/images/lionax-store-display.webp',
 		alt: 'lionax 门店陈列照片',
 	},
 	{
 		title: '施工场景',
 		desc: '从开瓶到加注，每一次标准施工，都是对车辆表现的认真守护。',
-		image: '/images/lionax-service-scene.jpg',
+		image: '/images/lionax-service-scene.webp',
 		alt: 'lionax 换油施工场景照片',
 	},
 	{
 		title: '赛事赞助',
 		desc: '走进真实赛场，以高强度赛事场景验证产品表现，持续强化 LIONAX 动力运动品牌声量。',
-		image: '/images/lionax-racing-sponsorship.jpg',
+		image: '/images/lionax-racing-sponsorship.webp',
 		alt: 'lionax 赛事赞助现场照片',
 	},
 ];
+
+const siteUrl = Astro.site ?? new URL('https://l-lionax.com');
+const structuredData = {
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{
+			'@type': 'ListItem',
+			position: 1,
+			name: '力耐官网',
+			item: siteUrl.href,
+		},
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: '渠道合作',
+			item: new URL('/cooperation/', siteUrl).href,
+		},
+	],
+};
 
 ---
 
 <SiteLayout
 	current="cooperation"
-	title="合作 | lionax 汽车润滑油与养护用品"
-	description="lionax 面向经销代理、汽修门店、电商和海外渠道开放合作。"
+	title="力耐机油代理与渠道合作 | LIONAX 经销支持"
+	description="力耐 LIONAX 面向经销商、汽修门店、洗美门店和动力运动养护渠道提供机油产品资料、授权体系、技术培训与合作支持。"
+	keywords={['力耐机油代理', '力耐经销商', 'LIONAX 合作', '机油渠道合作', '汽车养护品代理']}
+	pageSchemaType="ContactPage"
+	structuredData={structuredData}
 >
 	<section class="bg-white py-16">
 		<div class="mx-auto max-w-5xl px-5 sm:px-8">
+			<h1 class="sr-only">力耐 LIONAX 机油代理与渠道合作</h1>
 			<p class="text-sm font-black uppercase text-[#e30613]">Partner Support</p>
 			<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950 sm:text-5xl">与合作方共成长</h2>
 			<div class="mt-8 space-y-5 text-lg leading-9 text-neutral-700">
@@ -48,11 +71,13 @@ const serviceItems = [
 				</p>
 			</div>
 			<img
-				src="/images/lionax-cooperation-partner-support.png"
+				src="/images/lionax-cooperation-partner-support.webp"
 				alt="LIONAX 合作伙伴支持场景"
 				class="mt-8 aspect-[16/7] w-full object-cover"
 				width="1905"
 				height="828"
+				loading="lazy"
+				decoding="async"
 			/>
 		</div>
 	</section>
@@ -69,11 +94,13 @@ const serviceItems = [
 				</p>
 			</div>
 			<img
-				src="/images/lionax-authorization-system.png"
+				src="/images/lionax-authorization-system.webp"
 				alt="LIONAX 严控授权体系"
 				class="lg:col-span-2 aspect-[16/7] w-full object-cover"
 				width="1896"
 				height="829"
+				loading="lazy"
+				decoding="async"
 			/>
 		</div>
 	</section>
@@ -97,6 +124,8 @@ const serviceItems = [
 								class="h-full w-full object-cover"
 								width="1080"
 								height="1440"
+								loading="lazy"
+								decoding="async"
 							/>
 						</div>
 						<h3 class="mt-5 text-xl font-black">{item.title}</h3>
@@ -132,6 +161,8 @@ const serviceItems = [
 								class="mx-auto aspect-square w-full max-w-36 object-contain"
 								width="707"
 								height="711"
+								loading="lazy"
+								decoding="async"
 							/>
 							<p class="mt-2">京东旗舰店</p>
 						</div>
@@ -142,6 +173,8 @@ const serviceItems = [
 								class="mx-auto aspect-square w-full max-w-36 object-contain"
 								width="200"
 								height="200"
+								loading="lazy"
+								decoding="async"
 							/>
 							<p class="mt-2">扫码联系</p>
 						</div>

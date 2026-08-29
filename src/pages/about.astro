@@ -35,38 +35,63 @@ const globalAdvantages = [
 	{
 		title: '全球原装采购',
 		body: '力耐一直坚持品质是硬指标，2007年开始进行全球原装采购。全世界范围内寻找优质、专业的产品，与具有顶尖的科技团队、领先资质的生产商合作，确保产品优质性能和良好用户体验。',
-		image: '/images/lionax-global-sourcing.jpg',
+		image: '/images/lionax-global-sourcing.webp',
 		alt: '全球原装采购物流示意',
 	},
 	{
 		title: '标准严苛',
 		body: '力耐所有产品均要求达到先进的行业标准，核心产品更是达到汽车工业特别发达也特别严格的欧盟标准。',
-		image: '/images/lionax-global-standards.png',
+		image: '/images/lionax-global-standards.webp',
 		alt: '实验室标准检测场景',
 	},
 	{
 		title: '环保，为每位使用者负责',
 		body: '力耐在开发、引进每一个产品时，均注重环保要求，要求其符合欧盟环保标准或国家环保标准，保证每位客户使用放心产品。',
-		image: '/images/lionax-global-sustainability.png',
+		image: '/images/lionax-global-sustainability.webp',
 		alt: '环保可持续理念示意',
 	},
 ];
+
+const siteUrl = Astro.site ?? new URL('https://l-lionax.com');
+const structuredData = {
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{
+			'@type': 'ListItem',
+			position: 1,
+			name: '力耐官网',
+			item: siteUrl.href,
+		},
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: '关于力耐',
+			item: new URL('/about/', siteUrl).href,
+		},
+	],
+};
 
 ---
 
 <SiteLayout
 	current="about"
-	title="关于 | lionax 汽车润滑油与养护用品"
-	description="了解广州力耐国际贸易有限公司、力耐 LIONAX 品牌使命、品牌理念和公司介绍。"
+	title="关于力耐 | LIONAX 品牌与广州力耐国际贸易有限公司"
+	description="了解力耐 LIONAX 品牌使命、品质与服务理念，以及广州力耐国际贸易有限公司在汽车、摩托车后市场与工业运维领域的业务。"
+	keywords={['力耐', 'LIONAX', '广州力耐国际贸易有限公司', '力耐品牌', '力耐官网']}
+	pageSchemaType="AboutPage"
+	structuredData={structuredData}
 >
 	<section class="bg-white">
+		<h1 class="sr-only">关于力耐 LIONAX 品牌与广州力耐国际贸易有限公司</h1>
 		<div>
 			<img
-				src="/images/lionax-about-hero.png"
+				src="/images/lionax-about-hero.webp"
 				alt="广州力耐国际品牌运营商"
 				class="block aspect-[24/5] w-full object-cover"
 				width="1920"
 				height="400"
+				fetchpriority="high"
+				decoding="async"
 			/>
 		</div>
 	</section>
@@ -102,11 +127,13 @@ const globalAdvantages = [
 			<p class="text-sm font-black uppercase text-[#e30613]">For Better Performance</p>
 			<h2 class="mt-3 text-4xl font-black tracking-normal sm:text-5xl">为更好表现</h2>
 			<img
-				src="/images/lionax-about-brand-mission.png"
+				src="/images/lionax-about-brand-mission.webp"
 				alt="力耐品牌使命荷兰原装进口说明图"
 				class="mt-8 block aspect-[16/7] w-full object-cover"
 				width="2048"
 				height="768"
+				loading="lazy"
+				decoding="async"
 			/>
 			<div class="mt-8 grid gap-5">
 				{performanceItems.map((item) => (
@@ -133,18 +160,22 @@ const globalAdvantages = [
 		<div class="mx-auto max-w-5xl px-5 sm:px-8">
 			<div class="grid gap-5 lg:grid-cols-2">
 				<img
-					src="/images/lionax-company-team-event.png"
+					src="/images/lionax-company-team-event.webp"
 					alt="力耐团队活动合影"
 					class="block aspect-[29/18] w-full bg-white object-cover p-4 shadow-sm"
 					width="580"
 					height="360"
+					loading="lazy"
+					decoding="async"
 				/>
 				<img
-					src="/images/lionax-company-team-football.png"
+					src="/images/lionax-company-team-football.webp"
 					alt="力耐团队足球活动合影"
 					class="block aspect-[29/18] w-full bg-white object-cover p-4 shadow-sm"
 					width="580"
 					height="360"
+					loading="lazy"
+					decoding="async"
 				/>
 			</div>
 		</div>
@@ -163,6 +194,8 @@ const globalAdvantages = [
 							class="h-40 w-full object-cover"
 							width="520"
 							height="384"
+							loading="lazy"
+							decoding="async"
 						/>
 						<div class="flex flex-1 flex-col p-6">
 							<h3 class="text-xl font-black text-neutral-950">{item.title}</h3>

@@ -27,22 +27,62 @@ const getProductListImageClass = (product) =>
 			? 'h-[88%] w-auto max-w-[82%] object-contain transition group-hover:scale-[1.03]'
 		: product.imageScale === 'detailing-bottle'
 			? 'h-[88%] w-auto max-w-[72%] object-contain transition group-hover:scale-[1.03]'
-		: 'max-h-full object-contain transition group-hover:scale-[1.03]';
+				: 'max-h-full object-contain transition group-hover:scale-[1.03]';
+
+const siteUrl = Astro.site ?? new URL('https://l-lionax.com');
+const allProducts = productCategories.flatMap((category) =>
+	category.subCategories.flatMap((subCategory) => subCategory.products),
+);
+const structuredData = [
+	{
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: '力耐官网',
+				item: siteUrl.href,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: '产品中心',
+				item: new URL('/products/', siteUrl).href,
+			},
+		],
+	},
+	{
+		'@type': 'ItemList',
+		name: '力耐 LIONAX 产品目录',
+		numberOfItems: allProducts.length,
+		itemListElement: allProducts.map((product, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: product.name,
+			url: new URL(`/products/${product.slug}/`, siteUrl).href,
+		})),
+	},
+];
 ---
 
 <SiteLayout
 	current="products"
-	title="产品 | lionax 汽车润滑油与养护用品"
-	description="查看 lionax 润滑油、汽美产品、养护品和维修耗材分类，润滑油全系列从荷兰原罐原装。"
+	title="力耐产品中心 | 机油、汽车养护品与维修耗材 - LIONAX"
+	description="浏览力耐 LIONAX 产品目录，包括荷兰原装汽车机油、摩托车机油、汽美产品、汽车养护品与专业维修耗材。"
+	keywords={['力耐产品', '力耐机油', 'LIONAX 产品', '汽车养护品', '汽美产品', '汽车维修耗材']}
+	pageSchemaType="CollectionPage"
+	structuredData={structuredData}
 >
 	<section class="overflow-hidden bg-white">
-		<h1 class="sr-only">产品</h1>
+		<h1 class="sr-only">力耐 LIONAX 产品中心：机油、汽车养护品与维修耗材</h1>
 		<img
-			src="/images/lionax-product-header.png"
+			src="/images/lionax-product-header.webp"
 			alt="LIONAX 力耐国际 全球优势集成者，让世界优秀产品，更好为中国车主服务"
 			class="h-48 w-full object-cover object-center sm:mx-auto sm:h-auto sm:w-[65%] sm:object-contain"
 			width="2400"
 			height="1025"
+			fetchpriority="high"
+			decoding="async"
 		/>
 	</section>
 
@@ -83,6 +123,11 @@ const getProductListImageClass = (product) =>
 								<p class="text-sm font-black uppercase text-[#e30613]">Product Category</p>
 								<h2 class="mt-3 text-4xl font-black tracking-normal text-neutral-950">{category.name}</h2>
 								<p class="mt-4 max-w-3xl text-lg leading-8 text-neutral-600">{category.desc}</p>
+								{category.id === 'lubricants' && (
+									<a href="/lubricants/" class="mt-5 inline-flex text-sm font-black text-[#e30613] transition hover:text-neutral-950">
+										查看力耐机油与润滑油系列介绍 →
+									</a>
+								)}
 								{hasVisibleSubCategories(category) && (
 									<div class="mt-7 flex flex-wrap gap-2" data-subtabs-for={category.id}>
 										<button
@@ -124,11 +169,13 @@ const getProductListImageClass = (product) =>
 											class="group block bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
 										>
 											<div class="flex aspect-[4/3] items-center justify-center bg-neutral-50 p-5">
-												<img
-													src={product.image}
-													alt={product.alt}
-													class={getProductListImageClass(product)}
-												/>
+											<img
+												src={product.image}
+												alt={product.alt}
+												class={getProductListImageClass(product)}
+												loading="lazy"
+												decoding="async"
+											/>
 											</div>
 											<div class="mt-6">
 												<h3 class="text-2xl font-black text-neutral-950">{product.name}</h3>
@@ -157,11 +204,13 @@ const getProductListImageClass = (product) =>
 												class="group block bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
 											>
 												<div class="flex aspect-[4/3] items-center justify-center bg-neutral-50 p-5">
-													<img
-														src={product.image}
-														alt={product.alt}
-														class={getProductListImageClass(product)}
-													/>
+												<img
+													src={product.image}
+													alt={product.alt}
+													class={getProductListImageClass(product)}
+													loading="lazy"
+													decoding="async"
+												/>
 												</div>
 												<div class="mt-6">
 													<h3 class="text-2xl font-black text-neutral-950">{product.name}</h3>

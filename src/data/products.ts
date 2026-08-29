@@ -13,7 +13,7 @@ export const productCategories = [
 						name: 'Dynamic 2T Powersports 两冲程机油',
 						spec: '2-Stroke Engine Oil',
 						desc: '面向摩托艇、水上运动和两冲程动力设备的两冲程发动机油，适用于高负荷 Powersports 使用场景。',
-						image: '/images/batch-products/lionax-dynamic-2t-oil.png',
+						image: '/images/batch-products/lionax-dynamic-2t-oil.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax Dynamic 2T 两冲程 Powersports 机油',
 						features: [
@@ -41,7 +41,7 @@ export const productCategories = [
 						name: 'X-racing 4T PAO Powersports 机油',
 						spec: 'SAE 5W-30 PAO / 1L',
 						desc: '专为高性能空气和水冷四冲程 Powersports 设备开发的超高性能发动机油，适用于摩托车、摩托艇、动力板及装有催化转换器的车辆。',
-						image: '/images/lionax-xracing-5w30-pao.png',
+						image: '/images/lionax-xracing-5w30-pao.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 5W-30 PAO 四冲程 Powersports 机油',
 						features: [
@@ -73,7 +73,7 @@ export const productCategories = [
 						name: 'X-racing 4T PAO Powersports 机油',
 						spec: 'SAE 5W-40 PAO / 1L',
 						desc: '专门为四冲程摩托车润滑开发的合成发动机油，适用于发动机、变速箱和湿式离合器共用润滑的 Powersports 设备。',
-						image: '/images/lionax-xracing-5w40-pao.png',
+						image: '/images/lionax-xracing-5w40-pao.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 5W-40 PAO 四冲程 Powersports 机油',
 						features: [
@@ -106,7 +106,7 @@ export const productCategories = [
 						name: 'X-racing 4T PAO Powersports 机油',
 						spec: 'SAE 10W-50 PAO / 1L',
 						desc: '专为高性能空气和水冷四冲程 Powersports 设备开发的超高性能发动机油，适用于摩托车、摩托艇、动力板及装有催化转换器的车辆。',
-						image: '/images/lionax-xracing-10w50-pao.png',
+						image: '/images/lionax-xracing-10w50-pao.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 10W-50 PAO 四冲程 Powersports 机油',
 						features: [
@@ -138,7 +138,7 @@ export const productCategories = [
 						name: 'X-racing 4T PAO Powersports 机油',
 						spec: 'SAE 20W-50 PAO / 1L',
 						desc: '为满足四冲程 Powersports 设备需求研制的合成发动机油，为发动机、变速箱和湿式离合器提供良好保护，即使在恶劣环境和温度下也保持高可靠性。',
-						image: '/images/lionax-xracing-20w50-pao.png',
+						image: '/images/lionax-xracing-20w50-pao.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 20W-50 PAO 四冲程 Powersports 机油',
 						features: [
@@ -170,7 +170,7 @@ export const productCategories = [
 						name: 'X-racing 4T 全合成 Powersports 机油',
 						spec: 'SAE 10W-40 / 1L',
 						desc: '为满足四冲程摩托车特殊要求而开发的全合成发动机油，适用于发动机、变速箱与湿式离合器共用润滑场景。',
-						image: '/images/batch-products/lionax-xracing-10w40-full-synthetic.png',
+						image: '/images/batch-products/lionax-xracing-10w40-full-synthetic.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 10W-40 全合成 Powersports 机油',
 						features: [
@@ -201,7 +201,7 @@ export const productCategories = [
 						name: 'X-racing 4T 科技合成 Powersports 机油',
 						spec: 'SAE 10W-50 / 1L',
 						desc: '四冲程摩托车半合成发动机油，为高性能风冷四冲程 Powersports 设备开发，为发动机、变速箱和湿式离合器提供保护。',
-						image: '/images/batch-products/lionax-xracing-10w50-semi-synthetic.png',
+						image: '/images/batch-products/lionax-xracing-10w50-semi-synthetic.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 10W-50 科技合成 Powersports 机油',
 						features: [
@@ -231,7 +231,7 @@ export const productCategories = [
 						name: 'X-racing 4T 全合成 Powersports 机油 10W-60',
 						spec: 'SAE 10W-60 / 1L',
 						desc: '为满足高性能空气和水冷四冲程摩托车的特殊要求，甚至带有催化转换器机车开发的全合成发动机油。',
-						image: '/images/batch-products/lionax-xracing-10w60-full-synthetic.png',
+						image: '/images/batch-products/lionax-xracing-10w60-full-synthetic.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 10W-60 全合成 Powersports 机油',
 						features: [
@@ -257,7 +257,7 @@ export const productCategories = [
 						name: 'X-racing 2T Powersports 两冲程机油',
 						spec: '2-Stroke Engine Oil / 1L',
 						desc: '面向两冲程 Powersports 设备的发动机油，适用于越野摩托、摩托车等两冲程动力系统。',
-						image: '/images/batch-products/lionax-xracing-2t-oil.png',
+						image: '/images/batch-products/lionax-xracing-2t-oil.webp',
 						imageScale: 'powersports-oil',
 						alt: 'lionax X-racing 2T 两冲程 Powersports 机油',
 						features: [
@@ -286,7 +286,7 @@ export const productCategories = [
 						name: 'Racing-power 全合成汽车机油 0W-20',
 						spec: 'SAE 0W-20 / 1L / 4L',
 						desc: '高性能节能机油，基于 100% 合成技术机油，适合汽油发动机技术轿车和轻型货车等润滑需求，并为新一代油电混动车和 ECO 模式环保节能车辆特别设计。',
-						image: '/images/lionax-racing-power.png',
+						image: '/images/lionax-racing-power.webp',
 						imageScale: 'automotive-oil',
 						alt: 'lionax Racing-power 0W-20 全合成汽车机油',
 						features: [
@@ -322,7 +322,7 @@ export const productCategories = [
 						name: 'Ultra-power 全合成汽车机油 0W-30',
 						spec: 'SAE 0W-30 / 1L / 4L',
 						desc: '低硫、低磷、低灰份 low SAPS 全合成轿车发动机润滑油，使发动机运转拥有极致表现，同时帮助节省燃油并降低排放。',
-						image: '/images/batch-products/lionax-automotive-0w30.png',
+						image: '/images/batch-products/lionax-automotive-0w30.webp',
 						imageScale: 'automotive-oil',
 						alt: 'lionax Ultra-power 0W-30 全合成汽车机油',
 						features: [
@@ -357,7 +357,7 @@ export const productCategories = [
 						name: 'Ultra-power 全合成汽车机油 0W-40',
 						spec: 'SAE 0W-40 / 1L / 4L',
 						desc: '低硫、低灰份、低磷 mid SAPS 全合成轿车发动机润滑油，使发动机拥有极致运转表现，同时帮助节省燃油并降低排放。',
-						image: '/images/batch-products/lionax-automotive-0w40.png',
+						image: '/images/batch-products/lionax-automotive-0w40.webp',
 						imageScale: 'automotive-oil',
 						alt: 'lionax Ultra-power 0W-40 全合成汽车机油',
 						features: [
@@ -394,7 +394,7 @@ export const productCategories = [
 						name: 'Top-power 全合成汽车机油 5W-30',
 						spec: 'SAE 5W-30 / 1L / 4L',
 						desc: '高性能全合成轿车发动机润滑油，使发动机运转拥有极致表现，同时帮助节省燃油并降低排放。',
-						image: '/images/batch-products/lionax-automotive-5w30.png',
+						image: '/images/batch-products/lionax-automotive-5w30.webp',
 						imageScale: 'automotive-oil',
 						alt: 'lionax Top-power 5W-30 全合成汽车机油',
 						features: [
@@ -427,7 +427,7 @@ export const productCategories = [
 						name: 'Top-power 全合成汽车机油 5W-40',
 						spec: 'SAE 5W-40 / 1L / 4L',
 						desc: '高性能全合成轿车发动机润滑油，使发动机运转拥有极致表现，同时帮助节省燃油并降低排放。',
-						image: '/images/batch-products/lionax-automotive-5w40.png',
+						image: '/images/batch-products/lionax-automotive-5w40.webp',
 						imageScale: 'automotive-oil',
 						alt: 'lionax Top-power 5W-40 全合成汽车机油',
 						features: [
@@ -460,7 +460,7 @@ export const productCategories = [
 						name: 'Super-power 合成汽车机油 10W-30',
 						spec: 'SAE 10W-30 / 1L / 4L',
 						desc: '通用型高性能半合成润滑油，使用精湛工艺将精炼矿物油与多种添加剂混合而成，适用于轿车、商务车等常规汽柴油发动机。',
-						image: '/images/batch-products/lionax-automotive-10w30.png',
+						image: '/images/batch-products/lionax-automotive-10w30.webp',
 						imageScale: 'automotive-oil',
 						alt: 'lionax Super-power 10W-30 合成汽车机油',
 						features: [
@@ -496,7 +496,7 @@ export const productCategories = [
 						name: 'Multi-power 合成汽车机油 10W-40',
 						spec: 'SAE 10W-40 / 1L / 4L',
 						desc: '通用型高性能半合成润滑油，使用精湛工艺将精炼矿物油与多种添加剂混合而成，兼顾清洁能力、抗摩擦表现与燃油经济性。',
-						image: '/images/batch-products/lionax-automotive-10w40.png',
+						image: '/images/batch-products/lionax-automotive-10w40.webp',
 						imageScale: 'automotive-oil',
 						alt: 'lionax Multi-power 10W-40 合成汽车机油',
 						features: [
@@ -543,7 +543,7 @@ export const productCategories = [
 						name: '高浓缩洗车液',
 						spec: '产品编码 6003 / 4KG',
 						desc: '中性水基超浓缩型清洗剂，适用于漆面、玻璃、轮胎和轮毂，兼具清洗、去污、上光三重功效。',
-						image: '/images/batch-products/lionax-hyper-wash-fluid.png',
+						image: '/images/batch-products/lionax-hyper-wash-fluid.webp',
 						imageScale: 'detailing-jug',
 						alt: 'lionax 高浓缩洗车液 Automotive Hyper Wash Fluid Concentrate',
 						features: [
@@ -567,7 +567,7 @@ export const productCategories = [
 						name: '强力轮毂清洗剂',
 						spec: '产品编码 6007 / 4KG',
 						desc: '水基轮毂清洗剂，配方温和，可快速渗透分解轮毂表面的铁粉、刹车粉、氧化层等顽固污渍。',
-						image: '/images/batch-products/lionax-wheel-cleaner.png',
+						image: '/images/batch-products/lionax-wheel-cleaner.webp',
 						imageScale: 'detailing-jug',
 						alt: 'lionax 强力轮毂清洗剂',
 						features: [
@@ -595,7 +595,7 @@ export const productCategories = [
 						name: '车身美容膏',
 						spec: '产品编码 5706 / 300ML',
 						desc: '适用于皮革、橡胶、塑料等部位，使用后干燥不油腻，不沾灰，不易沾染衣物。',
-						image: '/images/batch-products/lionax-body-beauty-cream.png',
+						image: '/images/batch-products/lionax-body-beauty-cream.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 车身美容膏',
 						features: [
@@ -617,7 +617,7 @@ export const productCategories = [
 						name: '皮革保养剂',
 						spec: '产品编码 5303 / 380ML',
 						desc: '用于皮革、橡胶、塑料表面护理，可形成保护层，让表面滋润、鲜亮、有光泽。',
-						image: '/images/batch-products/lionax-leather-care.png',
+						image: '/images/batch-products/lionax-leather-care.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 皮革保养剂',
 						features: [
@@ -645,7 +645,7 @@ export const productCategories = [
 						name: '至尊美容粗蜡',
 						spec: '产品编码 6101 / 1000ML',
 						desc: '采用高效、独特的研磨配方，适用于中度劣化车漆的初期研磨，可快速清除漆面瑕疵并提升施工效率。',
-						image: '/images/lionax-super-duty-rubbing-compound.png',
+						image: '/images/lionax-super-duty-rubbing-compound.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 至尊美容粗蜡 Super Duty Rubbing Compound',
 						features: [
@@ -671,7 +671,7 @@ export const productCategories = [
 						name: '至尊镜面蜡',
 						spec: '产品编码 6105 / 1000ML',
 						desc: '高效研磨配方，适用于漆面前期抛光后留下的螺旋纹等细划痕镜面还原处理，帮助恢复车漆亮丽光泽。',
-						image: '/images/batch-products/lionax-mirror-wax.png',
+						image: '/images/batch-products/lionax-mirror-wax.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 至尊镜面蜡 Machine Polish',
 						features: [
@@ -696,7 +696,7 @@ export const productCategories = [
 						name: '去污蜡',
 						spec: '产品编码 6107 / 300ML',
 						desc: '纳米还原乳化配方，适用于各色车系漆面，可去除水痕印、油膜、虫胶、树胶、鸟粪等顽固污垢。',
-						image: '/images/batch-products/lionax-stain-removing-wax.png',
+						image: '/images/batch-products/lionax-stain-removing-wax.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 去污蜡 Automotive Cleaner Polish',
 						features: [
@@ -720,7 +720,7 @@ export const productCategories = [
 						name: '瓷膜',
 						spec: 'Ceramic Coating / 50ml',
 						desc: '力耐瓷膜是汽车美容镀膜产品，以变性硅酮为主要成分，通过离子吸附作用形成坚固被膜，提供高光泽、耐久、防污保护，可用于整辆车漆面护理。',
-						image: '/images/batch-products/lionax-ceramic-coating.png',
+						image: '/images/batch-products/lionax-ceramic-coating.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 瓷膜 Ceramic Coating',
 						features: [
@@ -742,17 +742,17 @@ export const productCategories = [
 						],
 						gallery: [
 							{
-								image: '/images/batch-products/lionax-ceramic-coating-benefits.png',
+								image: '/images/batch-products/lionax-ceramic-coating-benefits.webp',
 								title: '多项性能集成',
 								caption: '维护简单、安全环保、防污耐久、光泽坚固、性价比高、施工便捷。',
 							},
 							{
-								image: '/images/batch-products/lionax-ceramic-coating-principle.png',
+								image: '/images/batch-products/lionax-ceramic-coating-principle.webp',
 								title: '磁膜化学形成原理',
 								caption: '通过离子吸附形成玻璃质镀膜，表面形成滑水性被膜，增强抗污表现。',
 							},
 							{
-								image: '/images/batch-products/lionax-ceramic-coating-steps.png',
+								image: '/images/batch-products/lionax-ceramic-coating-steps.webp',
 								title: '施工流程',
 								caption: '清洗、覆膜、擦拭、检查四步完成整车漆面护理。',
 							},
@@ -776,7 +776,7 @@ export const productCategories = [
 						name: '高浓缩雨刷精',
 						spec: 'Windshield Washer Additive / 36ml',
 						desc: '1:100 高浓缩雨刷精，中性配方，不腐蚀和堵塞雨刷管道及喷嘴，高效清洁挡风玻璃油污和虫斑，并保护雨刷胶条。',
-						image: '/images/batch-products/lionax-windshield-washer-additive.png',
+						image: '/images/batch-products/lionax-windshield-washer-additive.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 高浓缩雨刷精',
 						features: [
@@ -802,7 +802,7 @@ export const productCategories = [
 						name: '空调杀菌除味剂',
 						spec: 'Air Condition Disinfect Spray / 120ml',
 						desc: '采用植物分解酶分解技术，分解车内空间的氨、甲醛并快速去除异味，有效保持车内空气清新，提升驾乘舒适度。',
-						image: '/images/batch-products/lionax-air-condition-disinfect-spray.png',
+						image: '/images/batch-products/lionax-air-condition-disinfect-spray.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 空调杀菌除味剂',
 						features: [
@@ -834,7 +834,7 @@ export const productCategories = [
 						name: 'LN100 多功能润滑喷剂',
 						spec: 'Multi-Function Spray / 330ml',
 						desc: '多功能润滑喷剂，适合日常维护和零部件润滑施工场景。',
-						image: '/images/batch-products/lionax-ln100-multi-function-spray.png',
+						image: '/images/batch-products/lionax-ln100-multi-function-spray.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax LN100 多功能润滑喷剂',
 						features: [
@@ -854,7 +854,7 @@ export const productCategories = [
 						name: '万能长效防冻冷却液 红标',
 						spec: '-45℃ / 2L / 4L',
 						desc: '可添加到轿车或轻型卡车的防冻冷却液中，保护铝排和发动机金属件，防止过热、沸溢和冻结。',
-						image: '/images/batch-products/lionax-antifreeze-coolant-red.png',
+						image: '/images/batch-products/lionax-antifreeze-coolant-red.webp',
 						imageScale: 'detailing-jug',
 						alt: 'lionax 万能长效防冻冷却液红标',
 						features: [
@@ -880,7 +880,7 @@ export const productCategories = [
 						name: '万能长效防冻冷却液 绿标',
 						spec: '-45℃ / 2L / 4L',
 						desc: '适用于汽车冷却系统日常养护，帮助发动机金属部件抵御过热、沸溢和冻结，并提供长效防腐防锈保护。',
-						image: '/images/batch-products/lionax-antifreeze-coolant-green.png',
+						image: '/images/batch-products/lionax-antifreeze-coolant-green.webp',
 						imageScale: 'detailing-jug',
 						alt: 'lionax 万能长效防冻冷却液绿标',
 						features: [
@@ -906,7 +906,7 @@ export const productCategories = [
 						name: '空调能量增效剂',
 						spec: 'Air Condition Core Energy / 85ml',
 						desc: '用于提升汽车制冷系统性能的复合性添加剂，帮助保持制冷系统处于良好状态，减少开启冷气时的重托现象并降低压缩机噪音。',
-						image: '/images/batch-products/lionax-air-condition-core-energy.png',
+						image: '/images/batch-products/lionax-air-condition-core-energy.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 空调能量增效剂',
 						features: [
@@ -934,7 +934,7 @@ export const productCategories = [
 						name: '发动机外部清洁剂',
 						spec: 'Engine Surface Degreaser / 450ml',
 						desc: '用于发动机舱外部清洁，可溶解机油、油性污染、烟碱以及制动尘土，具备较强洗涤和清洁能力，短暂作用后即可去除顽固残渣。',
-						image: '/images/batch-products/lionax-engine-surface-degreaser.png',
+						image: '/images/batch-products/lionax-engine-surface-degreaser.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 发动机外部清洁剂',
 						features: [
@@ -960,7 +960,7 @@ export const productCategories = [
 						name: '线路保护剂',
 						spec: 'Engine Cleaner And Insulator / 500ml',
 						desc: '用于清洁引擎表面及线路油垢、灰尘和裸露线路氧化层，形成保护膜并隔绝水气，帮助降低电路系统阻抗并延缓线路老化。',
-						image: '/images/batch-products/lionax-engine-cleaner-line-insulator.png',
+						image: '/images/batch-products/lionax-engine-cleaner-line-insulator.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 线路保护剂',
 						features: [
@@ -986,7 +986,7 @@ export const productCategories = [
 						name: '电瓶桩头保护剂',
 						spec: 'Battery Terminal Protector / 300ml',
 						desc: '形成长效抗湿薄膜，对电子触点进行保养和维护，帮助去除湿气、防止触点氧化，并减少瞬间阻抗和电压下降。',
-						image: '/images/batch-products/lionax-battery-terminal-protector.png',
+						image: '/images/batch-products/lionax-battery-terminal-protector.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 电瓶桩头保护剂',
 						features: [
@@ -1015,7 +1015,7 @@ export const productCategories = [
 						name: '硅基润滑保护剂',
 						spec: 'Silicon Lube Spray / 500ml',
 						desc: '用于汽车门窗胶条、仪表台、门窗玻璃升降轨道等部位的润滑和保护，帮助抗静电、延缓橡塑老化，并改善轨道不顺畅等问题。',
-						image: '/images/batch-products/lionax-silicone-lube-spray.png',
+						image: '/images/batch-products/lionax-silicone-lube-spray.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 硅基润滑保护剂',
 						features: [
@@ -1041,7 +1041,7 @@ export const productCategories = [
 						name: '强力渗透润滑剂',
 						spec: 'Highly Adhesive Grease Spray / 500ml',
 						desc: '强力渗入极小缝隙并在预润滑表面快速形成粘膜，适合高压、撞击震动等零件润滑场景，具备高粘附和稳定性。',
-						image: '/images/batch-products/lionax-highly-adhesive-grease-spray.png',
+						image: '/images/batch-products/lionax-highly-adhesive-grease-spray.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 强力渗透润滑剂',
 						features: [
@@ -1069,7 +1069,7 @@ export const productCategories = [
 							{
 								title: '强力渗透，适合细小缝隙润滑',
 								desc: '可用于车门内饰、铰链和运动部件附近的润滑养护，帮助减少异响并保持部件运行顺畅。',
-								image: '/images/batch-products/lionax-highly-adhesive-grease-spray-usage.png',
+								image: '/images/batch-products/lionax-highly-adhesive-grease-spray-usage.webp',
 								alt: '强力渗透润滑剂施工场景',
 							},
 						],
@@ -1079,7 +1079,7 @@ export const productCategories = [
 						name: '散热器清洗剂',
 						spec: 'Auto Radiator Foam Cleaner / 450ml',
 						desc: '用于快速清洁散热器表面的污垢、粉尘等附着物，提高散热网的散热速度和冷却效果，适合冷却系统外部养护施工。',
-						image: '/images/batch-products/lionax-auto-radiator-foam-cleaner.png',
+						image: '/images/batch-products/lionax-auto-radiator-foam-cleaner.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 散热器清洗剂',
 						features: [
@@ -1102,7 +1102,7 @@ export const productCategories = [
 							{
 								title: '散热器外部泡沫清洁',
 								desc: '适合喷涂在散热网表面，清洁粉尘和污垢附着物，帮助恢复散热器工作效率。',
-								image: '/images/batch-products/lionax-auto-radiator-foam-cleaner-usage.png',
+								image: '/images/batch-products/lionax-auto-radiator-foam-cleaner-usage.webp',
 								alt: '散热器清洗剂施工场景',
 							},
 						],
@@ -1112,7 +1112,7 @@ export const productCategories = [
 											name: '环保型零部件清洁剂',
 											spec: 'Green For Parts Cleaner',
 											desc: '环保型零部件清洁剂，适合汽修零部件油污清洁和维修施工场景。',
-											image: '/images/batch-products/lionax-green-parts-cleaner.png',
+											image: '/images/batch-products/lionax-green-parts-cleaner.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 环保型零部件清洁剂',
 											features: [
@@ -1132,7 +1132,7 @@ export const productCategories = [
 												name: '底盘防撞漆',
 											spec: 'Underbody Coating / 1000ml',
 											desc: '采用欧洲先进高固份配方，固含量高、低挥发，符合欧盟环保标准；干燥后形成弹性连续保护层，耐汽油、高附着力，不易龟裂。',
-											image: '/images/batch-products/lionax-underbody-coating.png',
+											image: '/images/batch-products/lionax-underbody-coating.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 底盘防撞漆',
 											features: [
@@ -1158,7 +1158,7 @@ export const productCategories = [
 											name: '水性底盘防撞漆',
 											spec: 'Water Based Underbody Coating / 1000ml',
 											desc: '水溶性橡胶树脂合成品，环保型高固份配方；干燥后形成弹性连续保护层，具备高附着力、耐汽油、耐腐蚀、降噪音和长期防龟裂表现。',
-											image: '/images/batch-products/lionax-water-based-underbody-coating.png',
+											image: '/images/batch-products/lionax-water-based-underbody-coating.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 水性底盘防撞漆',
 											features: [
@@ -1185,7 +1185,7 @@ export const productCategories = [
 						name: '水箱全效清洁剂',
 						spec: 'Radiator Cleaner / 250ml',
 						desc: '用于清洗发动机冷却系统内的管路，清除系统中的水垢、铁锈及沉淀物，恢复冷却系统散热效果并防止过热。',
-						image: '/images/batch-products/lionax-radiator-cleaner.png',
+						image: '/images/batch-products/lionax-radiator-cleaner.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 水箱全效清洁剂',
 						features: [
@@ -1211,7 +1211,7 @@ export const productCategories = [
 						name: '水箱止漏保护剂',
 						spec: 'Radiator Stop Leak / 200ml',
 						desc: '用于迅速制止冷却系统各部位渗漏，润滑水泵和水套，不阻塞细小水道，并对冷却系统金属部件及密封件无害。',
-						image: '/images/batch-products/lionax-radiator-stop-leak.png',
+						image: '/images/batch-products/lionax-radiator-stop-leak.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 水箱止漏保护剂',
 						features: [
@@ -1238,7 +1238,7 @@ export const productCategories = [
 						name: '超级 DOT4 制动液',
 						spec: 'Super DOT4 Brake Fluid / 1000ml',
 						desc: '由乙二醇醚及烷基聚乙二醇制成的合成制动液，含抑制剂以防止金属部件腐蚀，并减少高温下氧化。',
-						image: '/images/batch-products/lionax-dot4-brake-fluid.png',
+						image: '/images/batch-products/lionax-dot4-brake-fluid.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 超级 DOT4 制动液',
 						features: [
@@ -1266,7 +1266,7 @@ export const productCategories = [
 						name: '自动变速箱清洁剂',
 						spec: 'Automatic Transmission Cleaner / 300ml',
 						desc: '全合成配方，安全高效，用于清除自动变速箱中的油泥、胶质及沉积物，帮助提升传动液传动效率并延长变速箱使用寿命。',
-						image: '/images/batch-products/lionax-automatic-transmission-cleaner.png',
+						image: '/images/batch-products/lionax-automatic-transmission-cleaner.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 自动变速箱清洁剂',
 						features: [
@@ -1293,7 +1293,7 @@ export const productCategories = [
 						name: '喷射系统清洗剂',
 						spec: 'Fuel Injection Cleaner / 300ml',
 						desc: '用于清洁受污染的汽油燃油系统，去除积碳以及油管、燃油分配器、喷油嘴沉积物，帮助改善启动、怠速、加速和排放表现。',
-						image: '/images/batch-products/lionax-fuel-injection-cleaner.png',
+						image: '/images/batch-products/lionax-fuel-injection-cleaner.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 喷射系统清洗剂',
 						features: [
@@ -1318,7 +1318,7 @@ export const productCategories = [
 						name: '喷油嘴清洗剂',
 						spec: 'Injection Cleaner / 400ml',
 						desc: '用于清洁燃油系统中的积碳和胶质，重点清洁喷油嘴，帮助确保喷油准确、改善燃油雾化并恢复发动机性能。',
-						image: '/images/batch-products/lionax-injection-cleaner.png',
+						image: '/images/batch-products/lionax-injection-cleaner.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 喷油嘴清洗剂',
 						features: [
@@ -1344,7 +1344,7 @@ export const productCategories = [
 						name: '节气门清洗剂',
 						spec: 'Throttle Valve Cleaner / 300ml',
 						desc: '用于清洁节流阀、节气门和进气道内污染物及沉积物的特殊活性溶剂，帮助清除积碳并恢复发动机动力和性能。',
-						image: '/images/batch-products/lionax-throttle-valve-cleaner.png',
+						image: '/images/batch-products/lionax-throttle-valve-cleaner.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 节气门清洗剂',
 						features: [
@@ -1367,7 +1367,7 @@ export const productCategories = [
 							{
 								title: '节气门清洁保养',
 								desc: '针对节气门和进气道沉积物进行清洁，改善空气流量，帮助车辆怠速更稳定。',
-								image: '/images/batch-products/lionax-throttle-valve-cleaner-usage.png',
+								image: '/images/batch-products/lionax-throttle-valve-cleaner-usage.webp',
 								alt: '节气门清洗剂使用方法示意',
 							},
 						],
@@ -1377,7 +1377,7 @@ export const productCategories = [
 						name: '三元催化清洗剂',
 						spec: 'Catalytic Converter Cleaner / 300ml',
 						desc: '用于清洁三元催化转换器表面形成的化学络化物，改善三元催化器工况，帮助降低尾气中 NO、CO、HC 排放。',
-						image: '/images/batch-products/lionax-catalytic-converter-cleaner.png',
+						image: '/images/batch-products/lionax-catalytic-converter-cleaner.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 三元催化清洗剂',
 						features: [
@@ -1403,7 +1403,7 @@ export const productCategories = [
 							{
 								title: '清洁催化转换器，改善尾气转化',
 								desc: '清除三元催化器表面沉积物，帮助 NO、CO、HC 等尾气成分转化，改善排放表现。',
-								image: '/images/batch-products/lionax-catalytic-converter-cleaner-principle.png',
+								image: '/images/batch-products/lionax-catalytic-converter-cleaner-principle.webp',
 								alt: '三元催化清洗剂尾气转化示意',
 							},
 						],
@@ -1413,7 +1413,7 @@ export const productCategories = [
 						name: '发动机内部清洁剂',
 						spec: 'Engine Flush / 300ml',
 						desc: '用于清除润滑系统中有害油泥、胶质等沉积物，使旧机油排出更彻底，减少对新机油的污染。',
-						image: '/images/batch-products/lionax-engine-flush.png',
+						image: '/images/batch-products/lionax-engine-flush.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 发动机内部清洁剂',
 						features: [
@@ -1436,7 +1436,7 @@ export const productCategories = [
 							{
 								title: '清除油泥胶质，恢复发动机内部洁净',
 								desc: '帮助清理润滑系统内油泥和胶质沉积物，使换油过程更彻底，降低新机油污染风险。',
-								image: '/images/batch-products/lionax-engine-flush-before-after.png',
+								image: '/images/batch-products/lionax-engine-flush-before-after.webp',
 								alt: '发动机内部清洁剂清洁前后对比',
 							},
 						],
@@ -1452,7 +1452,7 @@ export const productCategories = [
 						name: '自动变速箱保护剂',
 						spec: 'ATF Additive / 350ml',
 						desc: '用于自动变速箱系统养护，帮助减少变速箱打滑，保护密封件和 O 型圈并防止渗漏，保持换挡平顺并延长变速箱寿命。',
-						image: '/images/batch-products/lionax-atf-additive.png',
+						image: '/images/batch-products/lionax-atf-additive.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 自动变速箱保护剂',
 						features: [
@@ -1480,7 +1480,7 @@ export const productCategories = [
 						name: '发动机强效保护剂',
 						spec: 'Oil Additive / 300ml',
 						desc: '在发动机内部运动表面形成 MoS2 保护膜，减少摩擦与磨损，帮助改善发动机工况并提供长效润滑保护。',
-						image: '/images/batch-products/lionax-oil-additive.png',
+						image: '/images/batch-products/lionax-oil-additive.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 发动机强效保护剂',
 						features: [
@@ -1507,7 +1507,7 @@ export const productCategories = [
 						name: '燃油添加剂',
 						spec: 'Fuel Additive / 120ml',
 						desc: '美国进口原液多效型燃油添加剂，由抗氧、防腐、乳化等多种材料组成，用于燃油系统清洁与日常养护。',
-						image: '/images/batch-products/lionax-fuel-additive.png',
+						image: '/images/batch-products/lionax-fuel-additive.webp',
 						imageScale: 'detailing-bottle',
 						alt: 'lionax 燃油添加剂',
 						features: [
@@ -1528,19 +1528,19 @@ export const productCategories = [
 							{
 								title: '进气阀沉积物测试',
 								desc: '参考宝马 1 万公里进气阀沉积物测试，添加后可显著降低进气阀沉积物，帮助发动机恢复更顺畅的进气效率。',
-								image: '/images/batch-products/lionax-fuel-additive-test-power.png',
+								image: '/images/batch-products/lionax-fuel-additive-test-power.webp',
 								alt: '燃油添加剂进气阀沉积物测试数据',
 							},
 							{
 								title: '外部燃烧实验',
 								desc: '使用后火势更大、燃烧更充分，体现燃油雾化与助燃表现，帮助改善燃烧效率。',
-								image: '/images/batch-products/lionax-fuel-additive-external-combustion.png',
+								image: '/images/batch-products/lionax-fuel-additive-external-combustion.webp',
 								alt: '燃油添加剂外部燃烧实验对比',
 							},
 							{
 								title: '内部燃烧实验',
 								desc: '帮助减少汽油残留物，使汽油更充分燃烧，降低积碳形成风险，适合周期性燃油系统养护。',
-								image: '/images/batch-products/lionax-fuel-additive-internal-combustion.png',
+								image: '/images/batch-products/lionax-fuel-additive-internal-combustion.webp',
 								alt: '燃油添加剂内部燃烧实验对比',
 							},
 						],
@@ -1563,7 +1563,7 @@ export const productCategories = [
 											name: '8027 玻璃维修胶',
 											spec: 'Direct Glazing Sealant / 310ml',
 											desc: '单组分湿固化玻璃维修胶，高强度、高弹性，粘接力和内聚力优良；粘接柔韧耐久，具备良好密封性、耐刺穿性、耐水性、耐油及抗老化表现。',
-											image: '/images/batch-products/lionax-direct-glazing-sealant.png',
+											image: '/images/batch-products/lionax-direct-glazing-sealant.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 8027 玻璃维修胶',
 											features: [
@@ -1592,37 +1592,37 @@ export const productCategories = [
 												{
 													title: '安装前拆卸与预保护',
 													desc: '安装前检查车身外观，预清理胶条区域，拆除装饰胶条和旧风挡玻璃附件，并贴保护胶带，避免施工影响相邻车框部位。',
-													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-1.png',
+													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-1.webp',
 													alt: '玻璃维修胶安装步骤一至三',
 												},
 												{
 													title: '旧玻璃移除与新玻璃清洁',
 													desc: '移除旧风挡玻璃后，将新风挡玻璃预安装定位，并使用专用玻璃清洗剂清洁，避免使用酒精和油性清洁剂。',
-													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-2.png',
+													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-2.webp',
 													alt: '玻璃维修胶安装步骤四至六',
 												},
 												{
 													title: '活化清洁与底胶处理',
 													desc: '按施工环境要求处理玻璃粘接区域，涂覆活化清洗剂和底胶；底胶须在有效期内使用，涂覆后注意保护表面。',
-													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-3.png',
+													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-3.webp',
 													alt: '玻璃维修胶安装步骤七',
 												},
 												{
 													title: '车框清理与修补',
 													desc: '对旧胶体进行修整，减少对胶体本身的破坏，并将车框清洗干净；无底胶位置需进行补涂。',
-													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-4.png',
+													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-4.webp',
 													alt: '玻璃维修胶安装步骤八至十',
 												},
 												{
 													title: '车框施胶',
 													desc: '底胶完全干燥后施工，将胶嘴切出合适三角口，连续均匀施胶，胶线厚度按玻璃与车框定位胶块调整。',
-													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-5.png',
+													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-5.webp',
 													alt: '玻璃维修胶安装步骤十一',
 												},
 												{
 													title: '安装复位与安全交车',
 													desc: '施胶后 5 分钟内安装风挡玻璃并检测密封性，随后恢复饰条、雨刮器、后视镜等附件；完工后安全交车。',
-													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-6.png',
+													image: '/images/batch-products/lionax-direct-glazing-sealant-steps-6.webp',
 													alt: '玻璃维修胶安装步骤十二至十四',
 												},
 											],
@@ -1632,7 +1632,7 @@ export const productCategories = [
 											name: '钣金胶',
 											spec: 'Car Body Sealant / 310ml',
 											desc: '通过欧盟 RoHS 环保认证，适合钣金车间密封施工；操作性好，施工后表面清洁无污染，可喷漆并具备良好油漆附着力。',
-											image: '/images/batch-products/lionax-car-body-sealant.png',
+											image: '/images/batch-products/lionax-car-body-sealant.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 钣金胶',
 											features: [
@@ -1668,13 +1668,13 @@ export const productCategories = [
 												{
 													title: '鸭嘴胶嘴施工效果',
 													desc: '适合车身钣金接缝密封施工，形成均匀胶线，兼顾密封、防锈和后续喷涂外观。',
-													image: '/images/batch-products/lionax-car-body-sealant-duckbill.png',
+													image: '/images/batch-products/lionax-car-body-sealant-duckbill.webp',
 													alt: '钣金胶鸭嘴胶嘴施工效果',
 												},
 												{
 													title: '燕尾胶嘴施工效果',
 													desc: '可配合燕尾胶嘴实现原厂级涂胶纹理，提升修复后的整体一致性。',
-													image: '/images/batch-products/lionax-car-body-sealant-swallowtail.png',
+													image: '/images/batch-products/lionax-car-body-sealant-swallowtail.webp',
 													alt: '钣金胶燕尾胶嘴施工效果',
 												},
 											],
@@ -1684,7 +1684,7 @@ export const productCategories = [
 											name: '丙烯酸双组份结构胶',
 											spec: '10:1 / 50ml',
 											desc: '高强度双组份结构胶，适用于金属、塑料、复合材料、汽修粘接与工业装配场景。',
-											image: '/images/batch-products/lionax-acrylic-two-component-structural-adhesive.png',
+											image: '/images/batch-products/lionax-acrylic-two-component-structural-adhesive.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 丙烯酸双组份结构胶',
 											features: [
@@ -1705,7 +1705,7 @@ export const productCategories = [
 											name: '高强度螺纹锁固胶',
 											spec: 'High Strength High Viscosity / 50ml',
 											desc: '红色高强度螺纹锁固胶，适合螺纹紧固件装配和高强度锁固维修施工场景。',
-											image: '/images/batch-products/lionax-thread-locker.png',
+											image: '/images/batch-products/lionax-thread-locker.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 高强度螺纹锁固胶',
 											features: [
@@ -1727,7 +1727,7 @@ export const productCategories = [
 													name: '中强度低粘度螺纹锁固胶',
 												spec: 'Medium Strength Low Viscosity / 50ml',
 											desc: '蓝色中强度低粘度螺纹锁固胶，适合螺纹紧固件装配和中强度锁固维修施工场景。',
-											image: '/images/batch-products/lionax-thread-locker-blue.png',
+											image: '/images/batch-products/lionax-thread-locker-blue.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 中强度低粘度螺纹锁固胶',
 											features: [
@@ -1749,7 +1749,7 @@ export const productCategories = [
 												name: '瞬干胶',
 												spec: 'Instant Adhesive / 20g',
 												desc: '单组分、低粘度、透明、常温快速固化胶水，适合维修装配和门店常备胶黏剂。',
-												image: '/images/batch-products/lionax-instant-adhesive.png',
+												image: '/images/batch-products/lionax-instant-adhesive.webp',
 												imageScale: 'detailing-bottle',
 												alt: 'lionax 瞬干胶',
 												features: [
@@ -1771,7 +1771,7 @@ export const productCategories = [
 													name: '灰色 RTV 硅橡胶',
 												spec: 'RTV Grey Silicone / 80ml',
 												desc: '室温固化硅树胶，低气味、无腐蚀，对氧传感器安全；适合高温环境密封施工，固化后保持持久弹性并具备优良耐油性能。',
-												image: '/images/batch-products/lionax-rtv-grey-silicone.png',
+												image: '/images/batch-products/lionax-rtv-grey-silicone.webp',
 												imageScale: 'detailing-bottle',
 												alt: 'lionax 灰色 RTV 硅橡胶',
 												features: [
@@ -1798,7 +1798,7 @@ export const productCategories = [
 													{
 														title: '高温部件密封施工',
 														desc: '适合维修过程中用于发动机部件结合面密封，快速固化并保持弹性，帮助提升密封稳定性。',
-														image: '/images/batch-products/lionax-rtv-grey-silicone-usage.png',
+														image: '/images/batch-products/lionax-rtv-grey-silicone-usage.webp',
 														alt: '灰色 RTV 硅橡胶施工场景',
 													},
 												],
@@ -1814,7 +1814,7 @@ export const productCategories = [
 											name: '钝化铁制自粘平衡块',
 											spec: 'Passivated Iron Self / 5g/10g',
 											desc: '采用铁制造，克重误差小，表面喷砂处理，粘性强，符合欧盟环保标准；适合轮毂动平衡施工和门店常备补货。',
-											image: '/images/batch-products/lionax-passivated-iron-wheel-balancing-weights.png',
+											image: '/images/batch-products/lionax-passivated-iron-wheel-balancing-weights.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 钝化铁制自粘平衡块',
 											features: [
@@ -1838,7 +1838,7 @@ export const productCategories = [
 												{
 													title: '轮毂平衡施工流程',
 													desc: '施工前清洁粘贴部位，选择合适克数后压紧平衡块，提升贴合稳定性。',
-													image: '/images/batch-products/lionax-passivated-iron-wheel-balancing-weights-steps.png',
+													image: '/images/batch-products/lionax-passivated-iron-wheel-balancing-weights-steps.webp',
 													alt: '钝化铁制自粘平衡块施工流程',
 												},
 											],
@@ -1848,7 +1848,7 @@ export const productCategories = [
 											name: '铅制挂钩平衡块',
 											spec: 'Linking The Lead In Balance Weights / 100只/包',
 											desc: '采用铅制造，克度误差小，表面环氧处理，符合欧盟环保标准；适合轮毂动平衡施工和门店常备补货。',
-											image: '/images/batch-products/lionax-lead-hook-balance-weights.png',
+											image: '/images/batch-products/lionax-lead-hook-balance-weights.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 铅制挂钩平衡块',
 											features: [
@@ -1874,7 +1874,7 @@ export const productCategories = [
 											name: '浓缩硫化剂胶水',
 											spec: 'Concentrated Vulcanizing Cement',
 											desc: '适用于轮胎补胎修复施工的硫化胶水，适合汽修门店、轮胎店和快修快保场景。',
-											image: '/images/batch-products/lionax-concentrated-vulcanizing-cement.png',
+											image: '/images/batch-products/lionax-concentrated-vulcanizing-cement.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 浓缩硫化剂胶水',
 											features: [
@@ -1890,7 +1890,7 @@ export const productCategories = [
 												{
 													title: '浓缩硫化剂胶水细节',
 													desc: '用于补胎修复施工，可与补胎片、蘑菇钉等轮胎修补耗材配套使用。',
-													image: '/images/batch-products/lionax-concentrated-vulcanizing-cement-detail.png',
+													image: '/images/batch-products/lionax-concentrated-vulcanizing-cement-detail.webp',
 													alt: 'lionax 浓缩硫化剂胶水产品细节',
 												},
 											],
@@ -1900,7 +1900,7 @@ export const productCategories = [
 											name: '补胎圆片',
 											spec: 'Tire Repair Patch',
 											desc: '轮胎修补用补胎圆片，适合常规轮胎扎钉、漏气等修补施工场景。',
-											image: '/images/batch-products/lionax-tire-repair-patch.png',
+											image: '/images/batch-products/lionax-tire-repair-patch.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 补胎圆片',
 											features: [
@@ -1918,7 +1918,7 @@ export const productCategories = [
 											name: '安全密封胶',
 											spec: 'Safety Sealant',
 											desc: '轮胎修补密封产品，适合补胎区域密封和漏气修复配套施工。',
-											image: '/images/batch-products/lionax-safety-sealant.png',
+											image: '/images/batch-products/lionax-safety-sealant.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 安全密封胶',
 											features: [
@@ -1936,7 +1936,7 @@ export const productCategories = [
 											name: '蘑菇钉',
 											spec: 'Plugs Patch Combosity / 24pcs',
 											desc: '轮胎修补蘑菇钉，适合轮胎破损修补和门店补胎施工。',
-											image: '/images/batch-products/lionax-plugs-patch-combosity.png',
+											image: '/images/batch-products/lionax-plugs-patch-combosity.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 蘑菇钉补胎产品',
 											features: [
@@ -1954,7 +1954,7 @@ export const productCategories = [
 											name: '轮胎拆装润滑膏',
 											spec: 'Tire Mounting Paste / 1KG',
 											desc: '轮胎拆装润滑膏，适合轮胎拆装、安装和维修施工时使用。',
-											image: '/images/batch-products/lionax-tire-mounting-paste.png',
+											image: '/images/batch-products/lionax-tire-mounting-paste.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 轮胎拆装润滑膏',
 											features: [
@@ -1978,7 +1978,7 @@ export const productCategories = [
 												name: '起焊点钻头',
 											spec: 'Play A Bit Of Solder / 0.8mm',
 											desc: '原装进口高钴点（起）焊孔钻头，符合德国 DIN、ISO9001 标准；用于事故车钣金前在外侧焊板上预钻孔，点焊时可在钻孔内形成熔池，提升薄板焊接强度。',
-											image: '/images/batch-products/lionax-spot-weld-drill-bit.png',
+											image: '/images/batch-products/lionax-spot-weld-drill-bit.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 起焊点钻头',
 											features: [
@@ -2005,7 +2005,7 @@ export const productCategories = [
 											name: '玻璃切割线',
 											spec: 'Tamglass / 8.5mmx24m',
 											desc: '质量出色的特殊弯丝，具备良好的切割力，用于切断连接着的挡风玻璃，适合玻璃拆装与维修施工。',
-											image: '/images/batch-products/lionax-glass-cutting-wire.png',
+											image: '/images/batch-products/lionax-glass-cutting-wire.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 玻璃切割线',
 											features: [
@@ -2029,7 +2029,7 @@ export const productCategories = [
 											name: '手动胶枪',
 											spec: 'Dot Shot Pro / 1支',
 											desc: '适合 310 毫升筒装钣金胶及玻璃胶使用，密封胶筒设计，作业顺畅，不会自动流胶，易于清洁、保养和维修。',
-											image: '/images/batch-products/lionax-manual-caulking-gun.png',
+											image: '/images/batch-products/lionax-manual-caulking-gun.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 手动胶枪',
 											features: [
@@ -2054,7 +2054,7 @@ export const productCategories = [
 											name: '气动胶枪',
 											spec: 'Pneumatic gun / 1支',
 											desc: '气动打胶省力，适合 310 毫升筒装钣金胶及玻璃胶使用；密封胶筒设计，作业顺畅，不会自动流胶，易于清洁、保养和维修。',
-											image: '/images/batch-products/lionax-pneumatic-caulking-gun.png',
+											image: '/images/batch-products/lionax-pneumatic-caulking-gun.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 气动胶枪',
 											features: [
@@ -2079,7 +2079,7 @@ export const productCategories = [
 											name: '铝介子',
 											spec: 'AL - Meson / 100只/包',
 											desc: '抗热度高达 300 度，符合 DIN7603 规范，可提供平面密封；特殊热处理预热后结构相当柔软，适用于不平坦表面的密合。',
-											image: '/images/batch-products/lionax-al-meson.png',
+											image: '/images/batch-products/lionax-al-meson.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 铝介子',
 											features: [
@@ -2106,7 +2106,7 @@ export const productCategories = [
 											name: '铜介子',
 											spec: 'Copper mesons / 100只/包',
 											desc: '抗热度高达 900 度，符合 DIN7603 规范，可提供平面密封；特殊热处理预热后结构相当柔软，适用于不平坦表面的密合。',
-											image: '/images/batch-products/lionax-copper-mesons.png',
+											image: '/images/batch-products/lionax-copper-mesons.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 铜介子',
 											features: [
@@ -2133,7 +2133,7 @@ export const productCategories = [
 											name: '环保胶圈',
 											spec: 'Green Aprons / 100只/包',
 											desc: '原装进口，几何尺寸规则，经久耐用；适合维修密封、替换补件和门店常备耗材场景。',
-											image: '/images/batch-products/lionax-green-aprons.png',
+											image: '/images/batch-products/lionax-green-aprons.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 环保胶圈',
 											features: [
@@ -2157,7 +2157,7 @@ export const productCategories = [
 											name: '管夹',
 											spec: 'Pipe Clip / 100只/包',
 											desc: '深齿设计，加紧力大；齿型便置，不易反松；边缘光滑，不会割伤软管，适合维修固定和门店常备补货。',
-											image: '/images/batch-products/lionax-pipe-clip.png',
+											image: '/images/batch-products/lionax-pipe-clip.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 管夹',
 											features: [
@@ -2181,7 +2181,7 @@ export const productCategories = [
 											name: '喷油嘴胶圈',
 											spec: 'Nozzle And Aprons / 100只/包',
 											desc: '原装进口，几何尺寸规则，经久耐用；适合喷油嘴密封、维修替换和门店常备补货。',
-											image: '/images/batch-products/lionax-nozzle-aprons.png',
+											image: '/images/batch-products/lionax-nozzle-aprons.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 喷油嘴胶圈',
 											features: [
@@ -2205,7 +2205,7 @@ export const productCategories = [
 											name: '喷油嘴清洗工具',
 											spec: 'Nozzle cleaning tools / 1套装',
 											desc: '专业喷油嘴清洗工具，配合喷油嘴清洗剂 2111 使用，适合喷油嘴清洁保养与维修门店施工。',
-											image: '/images/batch-products/lionax-nozzle-cleaning-tools.png',
+											image: '/images/batch-products/lionax-nozzle-cleaning-tools.webp',
 											imageScale: 'detailing-bottle',
 											alt: 'lionax 喷油嘴清洗工具',
 											features: [
