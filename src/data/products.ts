@@ -305,7 +305,7 @@ export const productCategories = [
 							['粘度规格', 'SAE 0W-20'],
 							['包装规格', '1L / 4L'],
 							['应用场景', '轿车 / 商务车高性能汽油发动机和柴油发动机 / 油电混动车 / ECO 模式车辆'],
-							['认证标准', 'API SN/SN-RC / ILSAC GF-5 / GM Dexos 1 / GM 4718M'],
+							['认证标准', 'ACEA C5 / VW508.00/509.00 / Porsche C20'],
 							['Density @15℃ kg/m³', '847'],
 							['Viscosity @40℃ mm²/s', '43.1'],
 							['Viscosity @100℃ mm²/s', '8.3'],
